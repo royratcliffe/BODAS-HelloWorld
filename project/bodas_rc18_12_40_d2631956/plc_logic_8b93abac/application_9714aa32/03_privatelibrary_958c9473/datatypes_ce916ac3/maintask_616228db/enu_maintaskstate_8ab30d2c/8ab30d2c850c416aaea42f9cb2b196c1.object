@@ -1,0 +1,135 @@
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)8ab30d2c-850c-416a-aea4-2f9cb2b196c1",
+          "ParentGuid": "(Guid)9714aa32-6ed4-4580-abe0-ccf188ca16f3",
+          "Name": "(string)enu_MainTaskState",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": [
+              {
+                "@Key": "(Guid)829a18f2-c514-4f6e-9634-1df173429203",
+                "@Value": {
+                  "@Type": "829a18f2",
+                  "@Value": {
+                    "ParentObjects": {
+                      "@Type": "fa2ee218:IDictionary",
+                      "@Value": [
+                        {
+                          "@Key": "(Guid)d9b2b2cc-ea99-4c3b-aa42-1e5c49e65b84",
+                          "@Value": "(Guid)616228db-2e3a-4e40-8a2e-bd7623dd8e10"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "TypeGuid": "(Guid)40989022-e4d2-4dc7-89d2-9a412930b20e",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "829a18f2": "{829a18f2-c514-4f6e-9634-1df173429203}",
+        "fa2ee218": "{fa2ee218-a39b-4b6d-b249-49dbddbd168a}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "40989022",
+        "@Value": {
+          "TextListObject": {
+            "@Type": "4b60233c",
+            "@Value": {
+              "TextList": {
+                "@Type": "ArrayList:IList",
+                "@Value": [
+                  {
+                    "@Type": "53da1be7",
+                    "@Value": {
+                      "TextID": "(string)MT_INIT",
+                      "TextDefault": "(string)0",
+                      "LanguageTexts": {
+                        "@Type": "ArrayList:IList",
+                        "@Value": []
+                      }
+                    }
+                  },
+                  {
+                    "@Type": "53da1be7",
+                    "@Value": {
+                      "TextID": "(string)MT_CYCLE",
+                      "TextDefault": "(string)",
+                      "LanguageTexts": {
+                        "@Type": "ArrayList:IList",
+                        "@Value": []
+                      }
+                    }
+                  },
+                  {
+                    "@Type": "53da1be7",
+                    "@Value": {
+                      "TextID": "(string)",
+                      "TextDefault": "(string)",
+                      "LanguageTexts": {
+                        "@Type": "ArrayList:IList",
+                        "@Value": []
+                      }
+                    }
+                  }
+                ]
+              },
+              "Languages": {
+                "@Type": "ArrayList:IList",
+                "@Value": []
+              },
+              "GuidInit": "(Guid)3ba0393b-b70b-48fb-a22f-16499461519b",
+              "GuidReInit": "(Guid)08dad501-79c1-4546-a101-95254c9fe320",
+              "GuidExitX": "(Guid)442eb187-248b-45ee-a203-825868e9c4cf"
+            }
+          },
+          "Interface": {
+            "@Type": "a9ed5b7e",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only'}\n{attribute 'strict'}\nTYPE enu_MainTaskState :\n(\n\tMT_INIT := 0,\n\tMT_CYCLE\n);\nEND_TYPE\n",
+                  "LineInfoPersistence": "(string)8ab30d2c-850c-416a-aea4-2f9cb2b196c1_Decl_LineIds"
+                }
+              }
+            }
+          },
+          "RemovedTextListEntries": {
+            "@Type": "ArrayList:IList",
+            "@Value": []
+          }
+        }
+      },
+      "TypeInfos": {
+        "40989022": "{40989022-e4d2-4dc7-89d2-9a412930b20e}",
+        "4b60233c": "{4b60233c-f940-4beb-b331-82133b520151}",
+        "53da1be7": "{53da1be7-ad25-47c3-b0e8-e26286dad2e0}",
+        "a9ed5b7e": "{a9ed5b7e-75c5-4651-af16-d2c27e98cb94}",
+        "ArrayList": "System.Collections.ArrayList",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

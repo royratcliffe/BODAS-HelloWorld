@@ -1,0 +1,109 @@
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)715d2ac0-5986-48c1-84c7-80027a13aa4e",
+          "ParentGuid": "(Guid)9714aa32-6ed4-4580-abe0-ccf188ca16f3",
+          "Name": "(string)PRG_ISOBUSJ1939",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": [
+              {
+                "@Key": "(Guid)829a18f2-c514-4f6e-9634-1df173429203",
+                "@Value": {
+                  "@Type": "829a18f2",
+                  "@Value": {
+                    "ParentObjects": {
+                      "@Type": "fa2ee218:IDictionary",
+                      "@Value": [
+                        {
+                          "@Key": "(Guid)d9b2b2cc-ea99-4c3b-aa42-1e5c49e65b84",
+                          "@Value": "(Guid)b740c02e-d71a-41c7-9247-a7f26ed13f71"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "TypeGuid": "(Guid)6f9dac99-8de1-4efc-8465-68ac443b7d08",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)a9ed5b7e-75c5-4651-af16-d2c27e98cb94",
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "829a18f2": "{829a18f2-c514-4f6e-9634-1df173429203}",
+        "fa2ee218": "{fa2ee218-a39b-4b6d-b249-49dbddbd168a}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "6f9dac99",
+        "@Value": {
+          "SpecialFunc": {
+            "@Type": "0db3d7bb:Enum",
+            "@Value": "None"
+          },
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string);",
+                  "LineInfoPersistence": "(string)715d2ac0-5986-48c1-84c7-80027a13aa4e_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "Interface": {
+            "@Type": "a9ed5b7e",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * Program: PRG_ISOBUSJ1939\n *\n * Author:  \n *\n * Description:\n * Interface for ISOBUS\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nPROGRAM PRG_ISOBUSJ1939\nVAR\n\tdataJ1939Inst_as : ARRAY[1..enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInstMax_E] OF bds_isobus_appInst_ts;\n\t\n\tdataTxBufDataBoxes1_as : ARRAY[1..enu_IsobusJ1939_TxInst1Box.IsobusJ1939_TxInst1BoxMax_E] OF bds_isobus_txMsg_ts;\n\tdataRxBufDataBoxes1_as : ARRAY[1..enu_IsobusJ1939_RxInst1Box.IsobusJ1939_RxInst1BoxMax_E] OF bds_isobus_rxMsg_ts;\n\t\n\tdataTxBufDataBoxes2_as : ARRAY[1..enu_IsobusJ1939_TxInst2Box.IsobusJ1939_TxInst2BoxMax_E] OF bds_isobus_txMsg_ts;\n\tdataRxBufDataBoxes2_as : ARRAY[1..enu_IsobusJ1939_RxInst2Box.IsobusJ1939_RxInst2BoxMax_E] OF bds_isobus_rxMsg_ts;\n\t\n\tdataTxBufDataBoxes3_as : ARRAY[1..enu_IsobusJ1939_TxInst3Box.IsobusJ1939_TxInst3BoxMax_E] OF bds_isobus_txMsg_ts;\n\tdataRxBufDataBoxes3_as : ARRAY[1..enu_IsobusJ1939_RxInst3Box.IsobusJ1939_RxInst3BoxMax_E] OF bds_isobus_rxMsg_ts;\n\t\n\tdataJ1939Dm1Failrs_as : ARRAY[1..86] OF bds_isobus_dtcList_ts ; (* failure list struct-array *)\nEND_VAR\n",
+                  "LineInfoPersistence": "(string)715d2ac0-5986-48c1-84c7-80027a13aa4e_Decl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)36",
+          "POULevel": {
+            "@Type": "8e575c5b:Enum",
+            "@Value": "Standard"
+          },
+          "ChildObjectGuids": {
+            "@Type": "ArrayList:IList",
+            "@Value": []
+          },
+          "AddAttributeSubsequent": "(bool)False"
+        }
+      },
+      "TypeInfos": {
+        "0db3d7bb": "{0db3d7bb-cde0-4416-9a7b-ce49a0124323}",
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "6f9dac99": "{6f9dac99-8de1-4efc-8465-68ac443b7d08}",
+        "8e575c5b": "{8e575c5b-1d37-49c6-941b-5c0ec7874787}",
+        "a9ed5b7e": "{a9ed5b7e-75c5-4651-af16-d2c27e98cb94}",
+        "ArrayList": "System.Collections.ArrayList",
+        "bool": "System.Boolean",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

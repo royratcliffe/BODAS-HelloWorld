@@ -1,0 +1,61 @@
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)12c378ff-69e9-4e6f-906b-e8984cbc66e4",
+          "ParentGuid": "(Guid)9714aa32-6ed4-4580-abe0-ccf188ca16f3",
+          "Name": "(string)GlobalVariables",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)ffbfa93a-b94d-45fc-a329-229860183b1d",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "ffbfa93a",
+        "@Value": {
+          "Interface": {
+            "@Type": "a9ed5b7e",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)\nVAR_GLOBAL\n\tPrmAsw_gstruc: struc_para;\n\t\n\tanValue_perc_gu8          : USINT;\n\tswtStatus_gu8             : USINT;\n\tcan1RxDataboxCbkCntr_gu32 : UDINT;\nEND_VAR\n\nVAR_GLOBAL CONSTANT\n\tPrmAsw_cgstruc: struc_para :=\n\t(\n\t\tfctPmp_s16       := 0,\n    \tlistCtrlVlv_enu  := 1,\n\t\tnrCogs_s16       := 33,\n\t\tiSpSafout1_u16   := 500,\n\t\tiSpSafout2_u16   := 500,\n\t\teff_perc_au16    := [ 10, 50, 90 ],\n\t\tnEngSpd_rpm_au16 := [ 500, 2000, 3500 ],\n\t\tPrmDbg_struc     :=\n\t\t(\n\t\t\tflgXcpOn_b          := FALSE,\n\t\t\tflgStoreDataToNvm_b := FALSE\n\t\t)\n\t);\n \n\tErrMemMgr_nrDfesEntries_DU8           : USINT := 32;     (* Maximum number OF errors in DFES *)\n    ErrMemMgr_stNoEntryAvl_DU8            : USINT := 255;      \n\n    (* bit masks for error states *)\n    ErrMemMgr_BitMaskErrDeactvNotSave_DU8 : BYTE := 16#01;   (* mask TO fetch Deactive errors which are NOT saved yet *)\n    ErrMemMgr_BitMaskErrPrevActv_DU8      : BYTE := 16#10;   (* mask TO fetch previously active errors *)\n    ErrMemMgr_BitMaskErrActv_DU8          : BYTE := 16#03;   (* mask TO fetch active errors *)\n    ErrMemMgr_BitMaskErrDeactvSaved_DU8   : BYTE := 16#04;   (* mask TO fetch saved deactive errors *)\n    ErrMemMgr_BitMaskErrSts_DU8           : BYTE := 16#FF;   (* default mask *)\n    \n    ErrMemMgr_nrMaxErrEntry_DU8           : BYTE := 27;      (* Max. number of entries, before deleting starts *)\nEND_VAR",
+                  "LineInfoPersistence": "(string)12c378ff-69e9-4e6f-906b-e8984cbc66e4_Decl_LineIds"
+                }
+              }
+            }
+          },
+          "NetVarProperties": null,
+          "ParameterList": "(bool)False",
+          "AddAttributeSubsequent": "(bool)False"
+        }
+      },
+      "TypeInfos": {
+        "a9ed5b7e": "{a9ed5b7e-75c5-4651-af16-d2c27e98cb94}",
+        "bool": "System.Boolean",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "ffbfa93a": "{ffbfa93a-b94d-45fc-a329-229860183b1d}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

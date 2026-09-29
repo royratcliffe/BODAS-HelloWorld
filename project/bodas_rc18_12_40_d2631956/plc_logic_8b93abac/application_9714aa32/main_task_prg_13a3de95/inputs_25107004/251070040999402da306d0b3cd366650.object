@@ -1,0 +1,58 @@
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)25107004-0999-402d-a306-d0b3cd366650",
+          "ParentGuid": "(Guid)13a3de95-79c4-4593-965c-733fe13c5589",
+          "Name": "(string)INPUTS",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "8ac092e5",
+        "@Value": {
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(************************ INPUTS  *********************************************)\n(******************************************************************************)\n\nPRG_Inputs(\n \ti_TaskCycleTime_ms_u16 := TaskCycleTime_ms_u16,\n \to_T15_st_u8            => \n );\n \n(******************************************************************************)\n(************************ CAN INPUT  ******************************************)\n(******************************************************************************)\n\nPRG_CANIn();\n\n(* read current and previous states of system. *)\nbds_sys_getStates( ADR( states_s ) );\n \n(* if the system is in POSTRUN state currently *)\nIF ( NOT( USINT_TO_BOOL(  PRG_Inputs.o_T15_st_u8 ) ) OR states_s.currentState_e = BDS_SYSSTATE_POSTRUN_E ) THEN\n\tPostRun_st_b := TRUE;\n\t\nELSE\n\tPostRun_st_b := FALSE;\n\t\nEND_IF\n\n\n ",
+                  "LineInfoPersistence": "(string)25107004-0999-402d-a306-d0b3cd366650_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)37"
+        }
+      },
+      "TypeInfos": {
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "8ac092e5": "{8ac092e5-3128-4e26-9e7e-11016c6684f2}",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

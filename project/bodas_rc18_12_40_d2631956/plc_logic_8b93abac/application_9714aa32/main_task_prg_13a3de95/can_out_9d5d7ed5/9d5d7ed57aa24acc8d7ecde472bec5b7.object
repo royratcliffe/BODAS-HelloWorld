@@ -1,0 +1,58 @@
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)9d5d7ed5-7aa2-4acc-8d7e-cde472bec5b7",
+          "ParentGuid": "(Guid)13a3de95-79c4-4593-965c-733fe13c5589",
+          "Name": "(string)CAN_OUT",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "8ac092e5",
+        "@Value": {
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** CAN OUTPUT  *********************************************)\n(******************************************************************************)\n\nPRG_CANOut(\n\ti_statusNvmIni_u16  := PRG_NVMConfig.status_u16, \n\ti_iPmpFwdAct_mA_u16 := PRG_Outputs.no_CurrentK07_mA_u16, \n\ti_iPmpFwdSet_mA_u16 := PRG_Outputs.iPmpFwdSet_mA_u16, \n\ti_CtrlValve_u8      := PRG_Outputs.st_CtrlValve_u8, \n\ti_rxActEngPercTq_u8 := PRG_CANIn.o_rxActEngPercTq_u8, \n\ti_vWhlSpd_kph_u16   := UINT_TO_INT(PRG_Inputs.vWhlSpd_kph_u16), \n\ti_uPmpSnsr_mV_u16   := PRG_Inputs.uPmpSnsr_mV_u16, \n\ti_frqVehSnsr_Hz_u32 := PRG_Inputs.frqVehSnsr_Hz_u32, \n\ti_anValue_perc_u8   := GlobalVariables.anValue_perc_gu8, \n\ti_stBrkSwt_u8       := PRG_Outputs.st_BrkSwt_u8);",
+                  "LineInfoPersistence": "(string)9d5d7ed5-7aa2-4acc-8d7e-cde472bec5b7_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)20"
+        }
+      },
+      "TypeInfos": {
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "8ac092e5": "{8ac092e5-3128-4e26-9e7e-11016c6684f2}",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

@@ -1,0 +1,58 @@
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)0c1f0228-4f94-491a-ad3c-d60c435853de",
+          "ParentGuid": "(Guid)715d2ac0-5986-48c1-84c7-80027a13aa4e",
+          "Name": "(string)ACT_InitISOBUSJ1939",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "8ac092e5",
+        "@Value": {
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(* register isobus instance memory,                                     *\n*  IsobusInst_Max_E is the number of instances to be used!             *)\nbds_isobus_registerInstances(ADR(dataJ1939Inst_as),\n                             TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInstMax_E) - 1);\n\n(* #################################################################### *)\n(* CAN Channel 1 *)\n(* #################################################################### *)\nbds_isobus_registerTxDataboxes( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst1_E),\n\t\t\t\t\t\t\t\tADR(dataTxBufDataBoxes1_as),\n\t\t\t\t\t\t\t\tTO_USINT(enu_IsobusJ1939_TxInst1Box.IsobusJ1939_TxInst1BoxMax_E));\n\t\t\t\t\t\t\t\t\nbds_isobus_registerRxDataboxes( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst1_E),\n\t\t\t\t\t\t\t\tADR(dataRxBufDataBoxes1_as),\n\t\t\t\t\t\t\t\tTO_USINT(enu_IsobusJ1939_RxInst1Box.IsobusJ1939_RxInst1BoxMax_E));\n\t\t\t\t\t\t\t\t\n(* #################################################################### *)\n(* CAN Channel 2 *)\n(* #################################################################### *)\n\n(* register j1939 rx/tx message boxes                                   *)\nbds_isobus_registerTxDataboxes( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst2_E),\n\t\t\t\t\t\t\t\tADR(dataTxBufDataBoxes1_as),\n\t\t\t\t\t\t\t\tTO_USINT(enu_IsobusJ1939_TxInst2Box.IsobusJ1939_TxInst2BoxMax_E));\n\t\t\t\t\t\t\t\t\nbds_isobus_registerRxDataboxes( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst2_E),\n\t\t\t\t\t\t\t\tADR(dataRxBufDataBoxes2_as),\n\t\t\t\t\t\t\t\tTO_USINT(enu_IsobusJ1939_RxInst2Box.IsobusJ1939_RxInst2BoxMax_E));\n\n(* init a DM1 / DM2 failure list for the own ECU *)\n\nbds_isobus_initFailureList( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst2_E),\n\t\t\t\t\t\t\tTO_UINT(enu_IsobusJ1939_TxInst1Box.IsobusJ1939_TxInst1BoxDm1_E), (* TX box nbr FOR sending the DM1 failures *)\n\t\t\t\t\t\t\tTO_UINT(enu_IsobusJ1939_TxInst1Box.IsobusJ1939_TxInst1BoxDm2_E), (* TX box nbr FOR sending the DM2 failures *)\n\t\t\t\t\t\t\tTRUE);                                                           (* TX box nbr FOR sending the DM2 failures *)\n\n(* #################################################################### *)\n(* CAN Channel 3 *)\n(* #################################################################### *)\n(* unused *)\n\n(* register j1939 rx/tx message boxes                                   *)\nbds_isobus_registerTxDataboxes( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst3_E),\n\t\t\t\t\t\t\t\tADR(dataTxBufDataBoxes3_as),\n\t\t\t\t\t\t\t\tTO_UINT(enu_IsobusJ1939_RxInst3Box.IsobusJ1939_RxInst3BoxMax_E));\n\t\t\t\t\t\t\t\t\nbds_isobus_registerRxDataboxes( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst3_E),\n\t\t\t\t\t\t\t\tADR(dataRxBufDataBoxes3_as),\n\t\t\t\t\t\t\t\tTO_UINT(enu_IsobusJ1939_RxInst3Box.IsobusJ1939_RxInst3BoxMax_E));\n\n\n(* #################################################################### *)\n(* more configurations *)\n(* #################################################################### *)\t\t\t\t\t\t\t\t\t\n\n(* optionally define some ECU information of the controller application for the PGNs HW-ID and SW-ID:*)\nbds_isobus_setCaInfo( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst1_E),   (* instance number *)\n                      0 ,                       (* ECU location part shall be suppressed *)\n\t\t\t\t\t ADR('RC40'),   \t\t\t(* ECU name *)\n\t\t\t\t\t ADR('Bosch Rexroth'),      (* ECU manufacturer *)\n\t\t\t\t\t ADR('HelloWorld'));        (* Application task name *)\n\n(* optionally define some ECU information of the controller application for the PGNs HW-ID and SW-ID:*)\nbds_isobus_setCaInfo(  TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst2_E),   (* instance number *)\n                      0 ,                       (* ECU location part shall be suppressed *)\n\t\t\t\t\t ADR('RC40'),   \t\t\t(* ECU name *)\n\t\t\t\t\t ADR('Bosch Rexroth'),      (* ECU manufacturer *)\n\t\t\t\t\t ADR('HelloWorld'));        (* Application task name *)\n\n(* optionally define some ECU information of the controller application for the PGNs HW-ID and SW-ID:*)\nbds_isobus_setCaInfo(   TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst3_E),   (* instance number *)\n                      0 ,                       (* ECU location part shall be suppressed *)\n\t\t\t\t\t ADR('RC40'),   \t\t\t(* ECU name *)\n\t\t\t\t\t ADR('Bosch Rexroth'),      (* ECU manufacturer *)\n\t\t\t\t\t ADR('HelloWorld'));        (* Application task name *)\n\n(* configure the Address Claim Delay Format acc. to the ISOBUS standard *)\nbds_isobus_cfgAddrClaimFormat(FALSE);\n\n(* define the controller application name, required for address claiming *)\nbds_isobus_setCaName(\tTO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst1_E),\n\t\t\t\t\t\t16#00,  (* 1 bit arbitrary address capability *)\n\t\t\t\t\t\t16#00,  (* 3 bit industry group *)\n\t\t\t\t\t\t\t\t   (* #0 – Global, applies to all *)\n\t\t\t\t\t\t\t\t   (* #1 – On-Highway Equipment *)\n\t\t\t\t\t\t\t\t   (* #2 – Agricultural and Forestry Equipment *)\n\t\t\t\t\t\t\t\t   (* #3 – Construction Equipment *)\n\t\t\t\t\t\t\t\t   (* #4 – Marine Equipment *)\n\t\t\t\t\t\t\t\t   (* #5 – Industry Process Control, Stationary Equipment *)\n\t\t\t\t\t\t16#00,   (* 4 bit vehicle instance *)\n\t\t\t\t\t\t16#01,   (* 7 bit vehicle system *)\n\t\t\t\t\t\t16#03,   (* 8 bit function *)\n\t\t\t\t\t\t16#01,   (* 5 bit function instance *)\n\t\t\t\t\t\t16#01,   (* 3 bit ecu instance *)\n\t\t\t\t\t\t16#33,   (* Manufacturer Code 0x33 = Bosch *)\n\t\t\t\t\t\tBDS_ISOBUS_OWN_SN_DU32 ); (* 11 bit Manufacturer code *)\n\t\t\t\t\t\nbds_isobus_setCaName(\tTO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst2_E),\n\t\t\t\t\t\t16#00,  (* 1 bit arbitrary address capability *)\n\t\t\t\t\t\t16#00,  (* 3 bit industry group *)\n\t\t\t\t\t\t\t\t   (* #0 – Global, applies to all *)\n\t\t\t\t\t\t\t\t   (* #1 – On-Highway Equipment *)\n\t\t\t\t\t\t\t\t   (* #2 – Agricultural and Forestry Equipment *)\n\t\t\t\t\t\t\t\t   (* #3 – Construction Equipment *)\n\t\t\t\t\t\t\t\t   (* #4 – Marine Equipment *)\n\t\t\t\t\t\t\t\t   (* #5 – Industry Process Control, Stationary Equipment *)\n\t\t\t\t\t\t16#00,   (* 4 bit vehicle instance *)\n\t\t\t\t\t\t16#01,   (* 7 bit vehicle system *)\n\t\t\t\t\t\t16#03,   (* 8 bit function *)\n\t\t\t\t\t\t16#01,   (* 5 bit function instance *)\n\t\t\t\t\t\t16#01,   (* 3 bit ecu instance *)\n\t\t\t\t\t\t16#33,   (* Manufacturer Code 0x33 = Bosch *)\n\t\t\t\t\t\tBDS_ISOBUS_OWN_SN_DU32 ); (* 11 bit Manufacturer code *)\n\nbds_isobus_setCaName(\tTO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst3_E),\n\t\t\t\t\t\t16#00,  (* 1 bit arbitrary address capability *)\n\t\t\t\t\t\t16#00,  (* 3 bit industry group *)\n\t\t\t\t\t\t\t\t   (* #0 – Global, applies to all *)\n\t\t\t\t\t\t\t\t   (* #1 – On-Highway Equipment *)\n\t\t\t\t\t\t\t\t   (* #2 – Agricultural and Forestry Equipment *)\n\t\t\t\t\t\t\t\t   (* #3 – Construction Equipment *)\n\t\t\t\t\t\t\t\t   (* #4 – Marine Equipment *)\n\t\t\t\t\t\t\t\t   (* #5 – Industry Process Control, Stationary Equipment *)\n\t\t\t\t\t\t16#00,   (* 4 bit vehicle instance *)\n\t\t\t\t\t\t16#01,   (* 7 bit vehicle system *)\n\t\t\t\t\t\t16#03,   (* 8 bit function *)\n\t\t\t\t\t\t16#01,   (* 5 bit function instance *)\n\t\t\t\t\t\t16#01,   (* 3 bit ecu instance *)\n\t\t\t\t\t\t16#33,   (* Manufacturer Code 0x33 = Bosch *)\n\t\t\t\t\t\tBDS_ISOBUS_OWN_SN_DU32 ); (* 11 bit Manufacturer code *)\n\n(* define the initial source address and the CAN channel for the CA instance 1 *)\n(* PRQA S:\"Rule-10.3\" 4442 1 # justification: nrChCan1_u8 assigns parameter value to BSW enum *)\n\nbds_isobus_setCaAddr( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst1_E),  (* IsoBus instance number *)\n\t\t\t\t\t  bds_can_Chnl_te.BDS_CAN_1_D,                                     (* CAN channel number *)\n\t\t\t\t\t  16#03 );                                                         (* own address of this instance *)\n\nbds_isobus_setCaAddr( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst2_E),  (* IsoBus instance number *)\n\t\t\t\t\t  bds_can_Chnl_te.BDS_CAN_2_D,                                     (* CAN channel number *)\n\t\t\t\t\t  16#03 );                                                         (* own address of this instance *)\n\nbds_isobus_setCaAddr( TO_USINT(enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInst3_E),  (* IsoBus instance number *)\n\t\t\t\t\t  bds_can_Chnl_te.BDS_CAN_3_D,                                     (* CAN channel number *)\n\t\t\t\t\t  16#03 );                                                         (* own address of this instance *)\n\n(* initialize and start isobus communication for all instances on this CAN channel *)\n(* PRQA S:\"Rule-10.3\" 4442 1 # justification: nrChCan_u8 assigns parameter value to BSW enum *)\nbds_isobus_initComm( bds_can_Chnl_te.BDS_CAN_1_D,  (* CAN channel number *)\n\t\t\t\t\t 20);                          (* Max. allowed run time of the j1939 *)\n\t\t\t\t\t\t\t\t\t\t\t\t   (* task related to the j1939 cycle time *)\nbds_isobus_initComm( bds_can_Chnl_te.BDS_CAN_2_D,  (* CAN channel number *)\n\t\t\t\t\t 20);                          (* Max. allowed run time of the j1939 *)\n\t\t\t\t\t\t\t\t\t\t\t\t   (* task related to the j1939 cycle time *)\nbds_isobus_initComm( bds_can_Chnl_te.BDS_CAN_3_D,  (* CAN channel number *)\n\t\t\t\t\t 20);                          (* Max. allowed run time of the j1939 *)\n\t\t\t\t\t\t\t\t\t\t\t\t   (* task related to the j1939 cycle time *)",
+                  "LineInfoPersistence": "(string)0c1f0228-4f94-491a-ad3c-d60c435853de_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)220"
+        }
+      },
+      "TypeInfos": {
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "8ac092e5": "{8ac092e5-3128-4e26-9e7e-11016c6684f2}",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

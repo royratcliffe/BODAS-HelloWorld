@@ -1,0 +1,97 @@
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)a252716b-46bb-43f3-9551-a92260bc483b",
+          "ParentGuid": "(Guid)9714aa32-6ed4-4580-abe0-ccf188ca16f3",
+          "Name": "(string)TaskConfiguration",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)ae1de277-a207-4a28-9efb-456c06bd52f3",
+          "EmbeddedTypeGuids": null
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "ae1de277",
+        "@Value": {
+          "StackSize": "(uint)0",
+          "UseConfigurableStackSize": "(bool)False",
+          "TaskConfigurationList": {
+            "@Type": "75fc8bb3:IList",
+            "@Value": []
+          },
+          "SystemEventList": {
+            "@Type": "7be1d5a4:IList",
+            "@Value": []
+          },
+          "ExternalEventList": null,
+          "enum_guid": "(Guid)0d17b7bf-5c31-5e62-bf09-829d6ec5a987",
+          "jitter_distribution_guid": "(Guid)04ca1736-41fe-5585-94bd-e10740e0788f",
+          "task_struct_guid": "(Guid)5dc688dc-8e83-5f2f-95bf-068f6838a76c",
+          "task_config_info_guid": "(Guid)f27b046b-e779-5ea6-a6c4-3dc436bce893",
+          "task_global_vars_guid": "(Guid)b40c104e-b995-50e9-bfbb-9f2804205a90",
+          "setup_call_pou_guid": "(Guid)267fd651-4c3e-59fb-802f-2306d26ba983",
+          "sys_setup_pou_guid": "(Guid)e49570cf-d570-535e-a3ee-6397c2518dac",
+          "profiler_global_vars_guid": "(Guid)12415e4c-e5a9-52e2-8f5b-8722b9dd4c50",
+          "profiler_init_code_guid": "(Guid)d5594515-549c-58e1-9fde-9f300e6e4689",
+          "profiler_cycle_code_guid": "(Guid)9dd484c4-ed59-570a-a228-f72710978b58",
+          "profiler_fb_guid": "(Guid)e2846460-789c-5529-b94b-7b4f9ff1b63b",
+          "profiler_method_reset_guid": "(Guid)9e57d807-6638-5cd9-93c4-fe4dce98d291",
+          "profiler_method_starttiming_guid": "(Guid)c0162896-d250-588f-93c0-89d529416ba1",
+          "profiler_method_stoptiming_guid": "(Guid)2d074048-030c-5c35-bc3b-8692be030010",
+          "profiler_iectaskgetprofiling_guid": "(Guid)8dd0940b-e69c-5f3b-bdb3-e728d17bd045",
+          "alSysEventList": null,
+          "alTaskGroups": {
+            "@Type": "[]",
+            "@Value": [
+              {
+                "@Type": "609a42d4",
+                "@Value": {
+                  "Groupname": "(string)IEC-Tasks",
+                  "Core": "(int)-2",
+                  "DefaultGroup": "(bool)True",
+                  "Editable": "(bool)False"
+                }
+              }
+            ]
+          },
+          "sysevents_global_vars_guid": "(Guid)bd3ebeb6-ccf0-538a-aba3-79ac898bbed4",
+          "sysevents_functionsblock_guid": "(Guid)fd203657-3580-5ae5-af4d-9fcce91100f8",
+          "sysevents_fbinit_method_guid": "(Guid)f97469e1-00f7-5b38-a63d-fdeb58a44939",
+          "sysevents_fbexit_method_guid": "(Guid)45a0f00b-1e9e-58ee-870a-42fb9d18ebfe",
+          "sysevents_eventcallback_method_guid": "(Guid)3ee2e38b-b7e5-5bab-a7ac-9bf647340ca4",
+          "sysevents_resetget_property_guid": "(Guid)fa990acf-c125-5e71-b095-ea2006f8149e",
+          "parent_tasks": {
+            "@Type": "[Guid]",
+            "@Value": []
+          },
+          "device_app": "(Guid)00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "TypeInfos": {
+        "609a42d4": "{609a42d4-f974-4041-8548-f80e229ca5ed}",
+        "75fc8bb3": "{75fc8bb3-c744-4e99-b6eb-bb2796e19500}",
+        "7be1d5a4": "{7be1d5a4-d68c-4bc6-a7e5-e42a0ab42a09}",
+        "ae1de277": "{ae1de277-a207-4a28-9efb-456c06bd52f3}",
+        "bool": "System.Boolean",
+        "Guid": "System.Guid",
+        "int": "System.Int32",
+        "string": "System.String",
+        "uint": "System.UInt32"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

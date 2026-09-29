@@ -1,0 +1,58 @@
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)f9b5e46e-0eb5-436e-aa1a-5d40d8452054",
+          "ParentGuid": "(Guid)13a3de95-79c4-4593-965c-733fe13c5589",
+          "Name": "(string)RUN",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "8ac092e5",
+        "@Value": {
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(**************************** CAN Wakeup Handling   ***************************)\n(******************************************************************************)\n\n(* resetInfo_s.rbr_UserDefined_u32 = 0x01 means that the Wakeup has happened via CAN via CAN Channel 1 *)\n(* resetInfo_s.rbr_UserDefined_u32 = 0x04 means that the Wakeup has happened via CAN via CAN Channel 4 *)\nIF((16#01 = INIT_PRG.ResetInfo_struc.rbr_UserDefined_u32) OR (16#04 = INIT_PRG.ResetInfo_struc.rbr_UserDefined_u32)) THEN\n\n  bds_sys_cancelAltWakeup(); (* forces system state to go to POSTRUN *)\n\nEND_IF",
+                  "LineInfoPersistence": "(string)f9b5e46e-0eb5-436e-aa1a-5d40d8452054_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)19"
+        }
+      },
+      "TypeInfos": {
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "8ac092e5": "{8ac092e5-3128-4e26-9e7e-11016c6684f2}",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}
