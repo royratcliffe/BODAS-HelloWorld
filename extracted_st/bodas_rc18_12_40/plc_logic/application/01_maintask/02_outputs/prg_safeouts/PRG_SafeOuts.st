@@ -18,6 +18,5 @@
 *********************************************************************************************************************)
 PROGRAM PRG_SafeOuts
 VAR
-	PHMDL_CHNL1: UINT := UDINT_TO_UINT(PHMDL OR CHNL1);
-
+    PHMDL_CHNL1 : UINT := UDINT_TO_UINT(PHMDL OR CHNL1);
 END_VAR

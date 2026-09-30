@@ -1,9 +1,8 @@
 (* --- Interface --- *)
 {attribute 'external_name' := 'cmp_rts_DFC_rbr_memReadCalibInputError'}
-TYPE DFC_rbr_memReadCalibInputError :
-STRUCT
-	DTC: UDINT := 16#060A00;
-	DFCid: UINT := 959;
-	debounceMethod: USINT := NO_DEBOUNCE;
-END_STRUCT
+TYPE DFC_rbr_memReadCalibInputError : STRUCT
+        DTC            : UDINT := 16#060A00;
+        DFCid          : UINT  := 959;
+        debounceMethod : USINT := NO_DEBOUNCE;
+    END_STRUCT
 END_TYPE

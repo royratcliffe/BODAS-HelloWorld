@@ -2,19 +2,15 @@
 (******************************************************************************)
 (******************** Initialization: General System***************************)
 (******************************************************************************)
-
 (* --> debug: get reset info AND send it via CAN *)
 bds_sys_getResetInfo(ADR(ResetInfo_struc)); (* reads the reset information of ECU *)
 bds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#10001, BDS_CAN_EXD_DU8, 2, ADR(ResetInfo_struc.rbr_Grp_u16));
 bds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#10002, BDS_CAN_EXD_DU8, 2, ADR(ResetInfo_struc.rbr_Type_u16));
-
 ResetInfoData_au32[0] := ResetInfo_struc.rbr_UserDefined_u32;
 bds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#10003, BDS_CAN_EXD_DU8, 4, ADR(ResetInfoData_au32));
-
 (* debug <-- *)
 (* ASW name AND HW-ID *)
-bds_sys_applSwName(ADR(ApplSwName_str)); (* RC27-18/40 w/o Ethernet for others see the BSW manual *) 
-
+bds_sys_applSwName(ADR(ApplSwName_str)); (* RC27-18/40 w/o Ethernet for others see the BSW manual *)
 (* UUID (Byte 1..16) 392a682f-06fb-41eb-8b25-9b7ee48892f3 + major version (Byte 17) and minor version (Byte 18) *)
 (* Defined in BODAS-service Editor *)
 UDSUUID_no_au8[1]  := 16#39;
@@ -36,12 +32,9 @@ UDSUUID_no_au8[16] := 16#F3;
 (* version *)
 UDSUUID_no_au8[17] := 16#01; (* major version *)
 UDSUUID_no_au8[18] := 16#23; (* minor version *)
-
 (* Set UDS UUID for the BODAS-service App *)
 bds_uds_setUUID(ADR(UDSUUID_no_au8[1]), 16);
-
 (* Postrun and CAN Wakeup *)
 bds_sys_requestPostRunProlong(); (* request for prolong in postrun *)
-
 (* Enable writing and forcing *)
 bds_codesys_setForcingWritingMode(16#FFFF);

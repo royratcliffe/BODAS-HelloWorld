@@ -1,9 +1,8 @@
 (* --- Interface --- *)
 {attribute 'external_name' := 'cmp_rts_DFC_bds_NoDeb0x80b7'}
-TYPE DFC_bds_NoDeb0x80b7 :
-STRUCT
-	DTC: UDINT := 16#80B700;
-	DFCid: UINT := 190;
-	debounceMethod: USINT := TIME_UP_DOWN;
-END_STRUCT
+TYPE DFC_bds_NoDeb0x80b7 : STRUCT
+        DTC            : UDINT := 16#80B700;
+        DFCid          : UINT  := 190;
+        debounceMethod : USINT := TIME_UP_DOWN;
+    END_STRUCT
 END_TYPE

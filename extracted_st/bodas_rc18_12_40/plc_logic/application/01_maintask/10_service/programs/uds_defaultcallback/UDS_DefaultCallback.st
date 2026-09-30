@@ -4,7 +4,6 @@ VAR
 END_VAR
 
 (* --- Implementation --- *)
-
 GlobalVariables.PrmAsw_gstruc.fctPmp_s16                       := GlobalVariables.PrmAsw_cgstruc.fctPmp_s16;
 GlobalVariables.PrmAsw_gstruc.listCtrlVlv_enu                  := GlobalVariables.PrmAsw_cgstruc.listCtrlVlv_enu;
 GlobalVariables.PrmAsw_gstruc.nrCogs_s16                       := GlobalVariables.PrmAsw_cgstruc.nrCogs_s16;

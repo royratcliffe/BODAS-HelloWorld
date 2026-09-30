@@ -1,9 +1,8 @@
 (* --- Interface --- *)
 {attribute 'external_name' := 'cmp_rts_DFC_rbr_inAic'}
-TYPE DFC_rbr_inAic :
-STRUCT
-	DTC: UDINT := 16#038100;
-	DFCid: UINT := 883;
-	debounceMethod: USINT := NO_DEBOUNCE;
-END_STRUCT
+TYPE DFC_rbr_inAic : STRUCT
+        DTC            : UDINT := 16#038100;
+        DFCid          : UINT  := 883;
+        debounceMethod : USINT := NO_DEBOUNCE;
+    END_STRUCT
 END_TYPE

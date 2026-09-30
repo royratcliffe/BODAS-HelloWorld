@@ -1,6 +1,5 @@
 (* --- Implementation --- *)
 diagParam_s.diCntlAndDiag_l := TRUE; (* disable outputs *)
-
 (* Disable unused proportional outputs *)
 (*bds_outPwm_cfgDiag(bds_outPwm_signal_te.bds_outPwm_K07_E, diagParam_s);*) (* used FOR PropValve *)
 (*bds_outPwm_cfgDiag(bds_outPwm_signal_te.bds_outPwm_K09_E, diagParam_s);*) (* Safout HS1 *)
@@ -39,7 +38,6 @@ bds_outPwm_cfgDiag(bds_outPwm_signal_te.bds_outPwm_K80_E, diagParam_s);
 bds_outPwm_cfgDiag(bds_outPwm_signal_te.bds_outPwm_K81_E, diagParam_s);
 bds_outPwm_cfgDiag(bds_outPwm_signal_te.bds_outPwm_K82_E, diagParam_s);
 bds_outPwm_cfgDiag(bds_outPwm_signal_te.bds_outPwm_K83_E, diagParam_s);
-
 (* Disable unused digital outputs *)
 (*bds_outDig_cfgDiag(bds_outDig_K13_E, diagParam_s);*) (* used for CtrlValve *)
 bds_outDig_cfgDiag(bds_outDig_signal_te.bds_outDig_A04_E, diagParam_s);
@@ -56,14 +54,11 @@ bds_outDig_cfgDiag(bds_outDig_signal_te.bds_outDig_A49_E, diagParam_s);
 bds_outDig_cfgDiag(bds_outDig_signal_te.bds_outDig_K84_E, diagParam_s);
 bds_outDig_cfgDiag(bds_outDig_signal_te.bds_outDig_K85_E, diagParam_s);
 bds_outDig_cfgDiag(bds_outDig_signal_te.bds_outDig_K86_E, diagParam_s);
-bds_outDig_cfgDiag(bds_outDig_signal_te.bds_outDig_K87_E, diagParam_s);(* for the visualisation in BODAS-service App --> I/O *)
-
-
+bds_outDig_cfgDiag(bds_outDig_signal_te.bds_outDig_K87_E, diagParam_s); (* for the visualisation in BODAS-service App --> I/O *)
 (* Configure K08 as power supply for K13 Control valve *)
 diagParam_s.diFullDiag_l     := TRUE;
 diagParam_s.diCntlAndDiag_l  := FALSE;
 diagParam_s.diOpenLoadDetn_l := TRUE;
 diagParam_s.diNonHotSCDetn_l := FALSE;
-
 bds_outPwm_cfgDiag(bds_outPwm_signal_te.bds_outPwm_K08_E, diagParam_s);
 bds_outPwm_setDutyCycle(bds_outPwm_signal_te.bds_outPwm_K08_E, 1000);
