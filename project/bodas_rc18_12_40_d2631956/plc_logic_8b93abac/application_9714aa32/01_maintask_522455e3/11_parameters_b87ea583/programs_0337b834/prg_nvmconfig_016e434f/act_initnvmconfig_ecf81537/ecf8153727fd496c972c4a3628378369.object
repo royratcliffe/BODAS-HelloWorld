@@ -1,1 +1,58 @@
-﻿{"payload":{"meta":{"Graph":{"@Type":"81297157","@Value":{"Guid":"(Guid)ecf81537-27fd-496c-972c-4a3628378369","ParentGuid":"(Guid)016e434f-e2f4-4c36-9f1a-4a6f6df30062","Name":"(string)ACT_InitNVMConfig","Properties":{"@Type":"2c41fa04:IDictionary","@Value":{}},"TypeGuid":"(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2","EmbeddedTypeGuids":{"@Type":"[Guid]","@Value":["(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"]}}},"TypeInfos":{"2c41fa04":"{2c41fa04-1834-41c1-816e-303c7aa2c05b}","81297157":"{81297157-7ec9-45ce-845e-84cab2b88ade}","Guid":"System.Guid","string":"System.String"}},"object":{"Graph":{"@Type":"8ac092e5","@Value":{"Implementation":{"@Type":"3b83b776","@Value":{"TextDocument":{"@Type":"f3878285","@Value":{"TextBlobForSerialisation":"(string)(* get the status of last NVM block 1 operation, i.e. read after power on *)\nstatus_u16 := bds_mem_getBlockStatus(bds_mem_nvmBlock01_512_R_D);\n\n(* check whether NVM block 1 data could be loaded successfully *)\nIF (status_u16 <> BDS_MEM_NO_ERROR_DU16) THEN\n    (* block01 data are invalid and have to be restored by the application *)\n    (* 1) initialize all variables mapped into this block *)\n    GlobalVariables.PrmAsw_gstruc := GlobalVariables.PrmAsw_cgstruc;\n    (* 2) store RAM mirror with valid data into NVM *)\n    status_u16 :=\n        bds_mem_writeBlock(UINT_TO_USINT(bds_mem_nvmBlock01_512_R_D), ADR(GlobalVariables.PrmAsw_gstruc), 0, SIZEOF(GlobalVariables.PrmAsw_gstruc));\nELSE\n    (* check whether the parameters are out of the defined ranges *)\n    (* If so, then assign the default values *)\n    (* Important: when the blocks are used for the very first time, *)\n    (* they are inintialised with 0xFFFF *)\n    IF ((0 > GlobalVariables.PrmAsw_gstruc.fctPmp_s16) OR (50 < GlobalVariables.PrmAsw_gstruc.fctPmp_s16)) THEN\n        GlobalVariables.PrmAsw_gstruc.fctPmp_s16 := GlobalVariables.PrmAsw_cgstruc.fctPmp_s16;\n    END_IF\n\n    IF (2 < GlobalVariables.PrmAsw_gstruc.listCtrlVlv_enu) THEN\n        GlobalVariables.PrmAsw_gstruc.listCtrlVlv_enu := GlobalVariables.PrmAsw_cgstruc.listCtrlVlv_enu;\n    END_IF\n\n    IF ((0 > GlobalVariables.PrmAsw_gstruc.nrCogs_s16) OR (100 < GlobalVariables.PrmAsw_gstruc.nrCogs_s16)) THEN\n        GlobalVariables.PrmAsw_gstruc.nrCogs_s16 := GlobalVariables.PrmAsw_cgstruc.nrCogs_s16;\n    END_IF\n\n    IF (5000 < GlobalVariables.PrmAsw_gstruc.iSpSafout1_u16) THEN\n        GlobalVariables.PrmAsw_gstruc.iSpSafout1_u16 := GlobalVariables.PrmAsw_cgstruc.iSpSafout1_u16;\n    END_IF\n\n    IF (5000 < GlobalVariables.PrmAsw_gstruc.iSpSafout2_u16) THEN\n        GlobalVariables.PrmAsw_gstruc.iSpSafout2_u16 := GlobalVariables.PrmAsw_cgstruc.iSpSafout2_u16;\n    END_IF\n\n    IF ((0 > GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgXcpOn_b) OR (1 < GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgXcpOn_b)) THEN\n        GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgXcpOn_b := GlobalVariables.PrmAsw_cgstruc.PrmDbg_struc.flgXcpOn_b;\n    END_IF\n\n    IF ((0 > GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgStoreDataToNvm_b) OR (1 < GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgStoreDataToNvm_b))\n    THEN\n        GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgStoreDataToNvm_b := GlobalVariables.PrmAsw_cgstruc.PrmDbg_struc.flgStoreDataToNvm_b;\n    END_IF\n\n    IF (100 < GlobalVariables.PrmAsw_gstruc.eff_perc_au16[0]) THEN\n        GlobalVariables.PrmAsw_gstruc.eff_perc_au16[0] := GlobalVariables.PrmAsw_cgstruc.eff_perc_au16[0];\n    END_IF\n\n    IF (100 < GlobalVariables.PrmAsw_gstruc.eff_perc_au16[1]) THEN\n        GlobalVariables.PrmAsw_gstruc.eff_perc_au16[1] := GlobalVariables.PrmAsw_cgstruc.eff_perc_au16[1];\n    END_IF\n\n    IF (100 < GlobalVariables.PrmAsw_gstruc.eff_perc_au16[2]) THEN\n        GlobalVariables.PrmAsw_gstruc.eff_perc_au16[2] := GlobalVariables.PrmAsw_cgstruc.eff_perc_au16[2];\n    END_IF\n\n    IF (4000 < GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[0]) THEN\n        GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[0] := GlobalVariables.PrmAsw_cgstruc.nEngSpd_rpm_au16[0];\n    END_IF\n\n    IF (4000 < GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[1]) THEN\n        GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[1] := GlobalVariables.PrmAsw_cgstruc.nEngSpd_rpm_au16[1];\n    END_IF\n\n    IF (4000 < GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[2]) THEN\n        GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[2] := GlobalVariables.PrmAsw_cgstruc.nEngSpd_rpm_au16[2];\n    END_IF\nEND_IF\n","LineInfoPersistence":"(string)ecf81537-27fd-496c-972c-4a3628378369_Impl_LineIds"}}}},"UniqueIdGenerator":"(string)219"}},"TypeInfos":{"3b83b776":"{3b83b776-fb25-43b8-99f2-3c507c9143fc}","8ac092e5":"{8ac092e5-3128-4e26-9e7e-11016c6684f2}","f3878285":"{f3878285-8e4f-490b-bb1b-9acbb7eb04db}","string":"System.String"}}},"FormatVersion":"1.0"}
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)ecf81537-27fd-496c-972c-4a3628378369",
+          "ParentGuid": "(Guid)016e434f-e2f4-4c36-9f1a-4a6f6df30062",
+          "Name": "(string)ACT_InitNVMConfig",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "8ac092e5",
+        "@Value": {
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(* get the status of last NVM block 1 operation, i.e. read after power on *)\nstatus_u16 := bds_mem_getBlockStatus(bds_mem_nvmBlock01_512_R_D);\n\n(* check whether NVM block 1 data could be loaded successfully *)\nIF (status_u16 <> BDS_MEM_NO_ERROR_DU16) THEN\n    (* block01 data are invalid and have to be restored by the application *)\n    (* 1) initialize all variables mapped into this block *)\n    GlobalVariables.PrmAsw_gstruc := GlobalVariables.PrmAsw_cgstruc;\n    (* 2) store RAM mirror with valid data into NVM *)\n    status_u16 :=\n        bds_mem_writeBlock(UINT_TO_USINT(bds_mem_nvmBlock01_512_R_D), ADR(GlobalVariables.PrmAsw_gstruc), 0, SIZEOF(GlobalVariables.PrmAsw_gstruc));\nELSE\n    (* check whether the parameters are out of the defined ranges *)\n    (* If so, then assign the default values *)\n    (* Important: when the blocks are used for the very first time, *)\n    (* they are inintialised with 0xFFFF *)\n    IF ((0 > GlobalVariables.PrmAsw_gstruc.fctPmp_s16) OR (50 < GlobalVariables.PrmAsw_gstruc.fctPmp_s16)) THEN\n        GlobalVariables.PrmAsw_gstruc.fctPmp_s16 := GlobalVariables.PrmAsw_cgstruc.fctPmp_s16;\n    END_IF\n\n    IF (2 < GlobalVariables.PrmAsw_gstruc.listCtrlVlv_enu) THEN\n        GlobalVariables.PrmAsw_gstruc.listCtrlVlv_enu := GlobalVariables.PrmAsw_cgstruc.listCtrlVlv_enu;\n    END_IF\n\n    IF ((0 > GlobalVariables.PrmAsw_gstruc.nrCogs_s16) OR (100 < GlobalVariables.PrmAsw_gstruc.nrCogs_s16)) THEN\n        GlobalVariables.PrmAsw_gstruc.nrCogs_s16 := GlobalVariables.PrmAsw_cgstruc.nrCogs_s16;\n    END_IF\n\n    IF (5000 < GlobalVariables.PrmAsw_gstruc.iSpSafout1_u16) THEN\n        GlobalVariables.PrmAsw_gstruc.iSpSafout1_u16 := GlobalVariables.PrmAsw_cgstruc.iSpSafout1_u16;\n    END_IF\n\n    IF (5000 < GlobalVariables.PrmAsw_gstruc.iSpSafout2_u16) THEN\n        GlobalVariables.PrmAsw_gstruc.iSpSafout2_u16 := GlobalVariables.PrmAsw_cgstruc.iSpSafout2_u16;\n    END_IF\n\n    IF ((0 > GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgXcpOn_b) OR (1 < GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgXcpOn_b)) THEN\n        GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgXcpOn_b := GlobalVariables.PrmAsw_cgstruc.PrmDbg_struc.flgXcpOn_b;\n    END_IF\n\n    IF ((0 > GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgStoreDataToNvm_b) OR (1 < GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgStoreDataToNvm_b))\n    THEN\n        GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgStoreDataToNvm_b := GlobalVariables.PrmAsw_cgstruc.PrmDbg_struc.flgStoreDataToNvm_b;\n    END_IF\n\n    IF (100 < GlobalVariables.PrmAsw_gstruc.eff_perc_au16[0]) THEN\n        GlobalVariables.PrmAsw_gstruc.eff_perc_au16[0] := GlobalVariables.PrmAsw_cgstruc.eff_perc_au16[0];\n    END_IF\n\n    IF (100 < GlobalVariables.PrmAsw_gstruc.eff_perc_au16[1]) THEN\n        GlobalVariables.PrmAsw_gstruc.eff_perc_au16[1] := GlobalVariables.PrmAsw_cgstruc.eff_perc_au16[1];\n    END_IF\n\n    IF (100 < GlobalVariables.PrmAsw_gstruc.eff_perc_au16[2]) THEN\n        GlobalVariables.PrmAsw_gstruc.eff_perc_au16[2] := GlobalVariables.PrmAsw_cgstruc.eff_perc_au16[2];\n    END_IF\n\n    IF (4000 < GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[0]) THEN\n        GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[0] := GlobalVariables.PrmAsw_cgstruc.nEngSpd_rpm_au16[0];\n    END_IF\n\n    IF (4000 < GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[1]) THEN\n        GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[1] := GlobalVariables.PrmAsw_cgstruc.nEngSpd_rpm_au16[1];\n    END_IF\n\n    IF (4000 < GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[2]) THEN\n        GlobalVariables.PrmAsw_gstruc.nEngSpd_rpm_au16[2] := GlobalVariables.PrmAsw_cgstruc.nEngSpd_rpm_au16[2];\n    END_IF\nEND_IF\n",
+                  "LineInfoPersistence": "(string)ecf81537-27fd-496c-972c-4a3628378369_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)219"
+        }
+      },
+      "TypeInfos": {
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "8ac092e5": "{8ac092e5-3128-4e26-9e7e-11016c6684f2}",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

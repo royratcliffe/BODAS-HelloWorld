@@ -1,1 +1,109 @@
-﻿{"payload":{"meta":{"Graph":{"@Type":"81297157","@Value":{"Guid":"(Guid)05a845ba-01ae-4ea1-9ea4-79990db22961","ParentGuid":"(Guid)9714aa32-6ed4-4580-abe0-ccf188ca16f3","Name":"(string)PRG_CANOut","Properties":{"@Type":"2c41fa04:IDictionary","@Value":[{"@Key":"(Guid)829a18f2-c514-4f6e-9634-1df173429203","@Value":{"@Type":"829a18f2","@Value":{"ParentObjects":{"@Type":"fa2ee218:IDictionary","@Value":[{"@Key":"(Guid)d9b2b2cc-ea99-4c3b-aa42-1e5c49e65b84","@Value":"(Guid)b2b3c4ed-8627-40af-9250-31a6780a861d"}]}}}}]},"TypeGuid":"(Guid)6f9dac99-8de1-4efc-8465-68ac443b7d08","EmbeddedTypeGuids":{"@Type":"[Guid]","@Value":["(Guid)a9ed5b7e-75c5-4651-af16-d2c27e98cb94","(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"]}}},"TypeInfos":{"2c41fa04":"{2c41fa04-1834-41c1-816e-303c7aa2c05b}","81297157":"{81297157-7ec9-45ce-845e-84cab2b88ade}","829a18f2":"{829a18f2-c514-4f6e-9634-1df173429203}","fa2ee218":"{fa2ee218-a39b-4b6d-b249-49dbddbd168a}","Guid":"System.Guid","string":"System.String"}},"object":{"Graph":{"@Type":"6f9dac99","@Value":{"SpecialFunc":{"@Type":"0db3d7bb:Enum","@Value":"None"},"Implementation":{"@Type":"3b83b776","@Value":{"TextDocument":{"@Type":"f3878285","@Value":{"TextBlobForSerialisation":"(string)(* ----------------------------------------------------------------------- *)\n(* --- CAN legacy transmit --- *)\n(* ----------------------------------------------------------------------- *)\n(* Send a cyclic STD CAN message ON CAN1 when in OsMain *)\nbds_can_sendData(bds_can_Chnl_te.BDS_CAN_1_D, 16#2, BDS_CAN_STD_DU8, 0, 0);\n(* SnsrInp1 Tx *)\ndataTx_au8[1] := UINT_TO_USINT(i_uPmpSnsr_mV_u16);\ndataTx_au8[2] := UINT_TO_USINT(SHR(i_uPmpSnsr_mV_u16, 8));\ndataTx_au8[3] := i_stBrkSwt_u8;\ndataTx_au8[4] := UDINT_TO_USINT(i_frqVehSnsr_Hz_u32);\ndataTx_au8[5] := UDINT_TO_USINT(SHR(i_frqVehSnsr_Hz_u32, 8));\ndataTx_au8[6] := UDINT_TO_USINT(SHR(i_frqVehSnsr_Hz_u32, 16));\ndataTx_au8[7] := UDINT_TO_USINT(SHR(i_frqVehSnsr_Hz_u32, 24));\ndataTx_au8[8] := i_anValue_perc_u8; (* to test if 0x18FF1128 is received - legacy*)\n\nIF (0 = bds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#18FF2703, BDS_CAN_EXD_DU8, 8, ADR(dataTx_au8))) THEN\n    (* ok, message is buffered and will be sent as fast as possible *)\n    ;\nEND_IF\n\n(* ELSE: error *)\n(* Outp1 Tx message from CAN dbc *)\n(* Output currents *)\ndataTx_au8[1] := UINT_TO_USINT(i_iPmpFwdAct_mA_u16);         (* LSB *)\ndataTx_au8[2] := UINT_TO_USINT(SHR(i_iPmpFwdAct_mA_u16, 8)); (* MSB *)\ndataTx_au8[3] := UINT_TO_USINT(i_iPmpFwdSet_mA_u16);\ndataTx_au8[4] := UINT_TO_USINT(SHR(i_iPmpFwdSet_mA_u16, 8));\ndataTx_au8[5] := i_CtrlValve_u8;\ndataTx_au8[6] := TO_USINT(GlobalVariables.PrmAsw_gstruc.listCtrlVlv_enu);                   (* to test if the list DID C002 is received *)\ndataTx_au8[7] := TO_USINT(INT_TO_WORD(GlobalVariables.PrmAsw_gstruc.nrCogs_s16) AND 16#FF); (* to test if the no. of cogs DID C003 is received *)\ndataTx_au8[8] :=\n    i_rxActEngPercTq_u8; (* to test if ComConf_ComSignal_ComSignal_ActualEngPercentTorque_xRx is received *)\n\nIF (0 = bds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#18FF2603, BDS_CAN_EXD_DU8, 8, ADR(dataTx_au8))) THEN\n    (* ok, message is buffered and will be sent as fast as possible *)\n    ;\nEND_IF\n\n(* else: error *)\n(* ----------------------------------------------------------------------- *)\n(* --- CAN signal based transmit --- *)\n(* ----------------------------------------------------------------------- *)\n(* CCVS message FROM CAN dbc - out OF the 100 ms loop *)\n(* Vehicle Speed *)\nsigData_au8[1] := UINT_TO_USINT(i_vWhlSpd_kph_u16);\nsigData_au8[2] := UINT_TO_USINT(SHR(i_vWhlSpd_kph_u16, 8));\n\nIF (0 = bds_can_sendSignal(ComConf_ComSignal_ComSignal_WheelBasedVehicleSpeed_xTx, ADR(sigData_au8), 0)) THEN\n    (* ok,message is sent on bus with updated signal data *)\n    ;\nEND_IF\n\n(* Parking Brake (Control Valve) *)\nsigData_au8[1] := i_CtrlValve_u8;\n\nIF (0 = bds_can_sendSignal(ComConf_ComSignal_ComSignal_ParkingBrakeSwitch_xTx, ADR(sigData_au8), 0)) THEN\n    (* ok,message is sent on bus with updated signal data *)\n    ;\nEND_IF\n","LineInfoPersistence":"(string)05a845ba-01ae-4ea1-9ea4-79990db22961_Impl_LineIds"}}}},"Interface":{"@Type":"a9ed5b7e","@Value":{"TextDocument":{"@Type":"f3878285","@Value":{"TextBlobForSerialisation":"(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * Program: PRG_CANOut\n *\n * Author:  \n *\n * Description:\n * Interface for CAN Transmitting\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nPROGRAM PRG_CANOut\nVAR\n    (* Buffer for rx databoxes *)\n    CAN1RxData_astruc   : ARRAY[1..2] OF bds_can_DataboxData_ts;\n    CAN2RxData_astruc   : ARRAY[1..5] OF bds_can_DataboxData_ts;\n    bds_IPduGrpVctr_au8 : ARRAY[0..7] OF USINT;\n    retSet_u16          : UINT;\n    retStrt_u16         : UINT;\n    data_au8            : ARRAY[1..8] OF USINT;\n    dataTx_au8          : ARRAY[1..8] OF USINT; (* data ARRAY FOR CAN legacy data*)\n    sigData_au8         : ARRAY[1..8] OF USINT; (* data ARRAY FOR CAN signal based data*)\nEND_VAR\nVAR_INPUT\n    i_statusNvmIni_u16  : UINT;\n    i_iPmpFwdAct_mA_u16 : UINT;\n    i_iPmpFwdSet_mA_u16 : UINT;\n    i_CtrlValve_u8      : USINT;\n    i_rxActEngPercTq_u8 : USINT;\n    i_vWhlSpd_kph_u16   : INT;\n    i_uPmpSnsr_mV_u16   : UINT;\n    i_frqVehSnsr_Hz_u32 : UDINT;\n    i_anValue_perc_u8   : USINT;\n    i_stBrkSwt_u8       : USINT;\nEND_VAR\nVAR_OUTPUT\nEND_VAR\n","LineInfoPersistence":"(string)05a845ba-01ae-4ea1-9ea4-79990db22961_Decl_LineIds"}}}},"UniqueIdGenerator":"(string)360","POULevel":{"@Type":"8e575c5b:Enum","@Value":"Standard"},"ChildObjectGuids":{"@Type":"ArrayList:IList","@Value":[]},"AddAttributeSubsequent":"(bool)False"}},"TypeInfos":{"0db3d7bb":"{0db3d7bb-cde0-4416-9a7b-ce49a0124323}","3b83b776":"{3b83b776-fb25-43b8-99f2-3c507c9143fc}","6f9dac99":"{6f9dac99-8de1-4efc-8465-68ac443b7d08}","8e575c5b":"{8e575c5b-1d37-49c6-941b-5c0ec7874787}","a9ed5b7e":"{a9ed5b7e-75c5-4651-af16-d2c27e98cb94}","ArrayList":"System.Collections.ArrayList","bool":"System.Boolean","f3878285":"{f3878285-8e4f-490b-bb1b-9acbb7eb04db}","string":"System.String"}}},"FormatVersion":"1.0"}
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)05a845ba-01ae-4ea1-9ea4-79990db22961",
+          "ParentGuid": "(Guid)9714aa32-6ed4-4580-abe0-ccf188ca16f3",
+          "Name": "(string)PRG_CANOut",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": [
+              {
+                "@Key": "(Guid)829a18f2-c514-4f6e-9634-1df173429203",
+                "@Value": {
+                  "@Type": "829a18f2",
+                  "@Value": {
+                    "ParentObjects": {
+                      "@Type": "fa2ee218:IDictionary",
+                      "@Value": [
+                        {
+                          "@Key": "(Guid)d9b2b2cc-ea99-4c3b-aa42-1e5c49e65b84",
+                          "@Value": "(Guid)b2b3c4ed-8627-40af-9250-31a6780a861d"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "TypeGuid": "(Guid)6f9dac99-8de1-4efc-8465-68ac443b7d08",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)a9ed5b7e-75c5-4651-af16-d2c27e98cb94",
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "829a18f2": "{829a18f2-c514-4f6e-9634-1df173429203}",
+        "fa2ee218": "{fa2ee218-a39b-4b6d-b249-49dbddbd168a}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "6f9dac99",
+        "@Value": {
+          "SpecialFunc": {
+            "@Type": "0db3d7bb:Enum",
+            "@Value": "None"
+          },
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(* ----------------------------------------------------------------------- *)\n(* --- CAN legacy transmit --- *)\n(* ----------------------------------------------------------------------- *)\n(* Send a cyclic STD CAN message ON CAN1 when in OsMain *)\nbds_can_sendData(bds_can_Chnl_te.BDS_CAN_1_D, 16#2, BDS_CAN_STD_DU8, 0, 0);\n(* SnsrInp1 Tx *)\ndataTx_au8[1] := UINT_TO_USINT(i_uPmpSnsr_mV_u16);\ndataTx_au8[2] := UINT_TO_USINT(SHR(i_uPmpSnsr_mV_u16, 8));\ndataTx_au8[3] := i_stBrkSwt_u8;\ndataTx_au8[4] := UDINT_TO_USINT(i_frqVehSnsr_Hz_u32);\ndataTx_au8[5] := UDINT_TO_USINT(SHR(i_frqVehSnsr_Hz_u32, 8));\ndataTx_au8[6] := UDINT_TO_USINT(SHR(i_frqVehSnsr_Hz_u32, 16));\ndataTx_au8[7] := UDINT_TO_USINT(SHR(i_frqVehSnsr_Hz_u32, 24));\ndataTx_au8[8] := i_anValue_perc_u8; (* to test if 0x18FF1128 is received - legacy*)\n\nIF (0 = bds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#18FF2703, BDS_CAN_EXD_DU8, 8, ADR(dataTx_au8))) THEN\n    (* ok, message is buffered and will be sent as fast as possible *)\n    ;\nEND_IF\n\n(* ELSE: error *)\n(* Outp1 Tx message from CAN dbc *)\n(* Output currents *)\ndataTx_au8[1] := UINT_TO_USINT(i_iPmpFwdAct_mA_u16);         (* LSB *)\ndataTx_au8[2] := UINT_TO_USINT(SHR(i_iPmpFwdAct_mA_u16, 8)); (* MSB *)\ndataTx_au8[3] := UINT_TO_USINT(i_iPmpFwdSet_mA_u16);\ndataTx_au8[4] := UINT_TO_USINT(SHR(i_iPmpFwdSet_mA_u16, 8));\ndataTx_au8[5] := i_CtrlValve_u8;\ndataTx_au8[6] := TO_USINT(GlobalVariables.PrmAsw_gstruc.listCtrlVlv_enu);                   (* to test if the list DID C002 is received *)\ndataTx_au8[7] := TO_USINT(INT_TO_WORD(GlobalVariables.PrmAsw_gstruc.nrCogs_s16) AND 16#FF); (* to test if the no. of cogs DID C003 is received *)\ndataTx_au8[8] :=\n    i_rxActEngPercTq_u8; (* to test if ComConf_ComSignal_ComSignal_ActualEngPercentTorque_xRx is received *)\n\nIF (0 = bds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#18FF2603, BDS_CAN_EXD_DU8, 8, ADR(dataTx_au8))) THEN\n    (* ok, message is buffered and will be sent as fast as possible *)\n    ;\nEND_IF\n\n(* else: error *)\n(* ----------------------------------------------------------------------- *)\n(* --- CAN signal based transmit --- *)\n(* ----------------------------------------------------------------------- *)\n(* CCVS message FROM CAN dbc - out OF the 100 ms loop *)\n(* Vehicle Speed *)\nsigData_au8[1] := UINT_TO_USINT(i_vWhlSpd_kph_u16);\nsigData_au8[2] := UINT_TO_USINT(SHR(i_vWhlSpd_kph_u16, 8));\n\nIF (0 = bds_can_sendSignal(ComConf_ComSignal_ComSignal_WheelBasedVehicleSpeed_xTx, ADR(sigData_au8), 0)) THEN\n    (* ok,message is sent on bus with updated signal data *)\n    ;\nEND_IF\n\n(* Parking Brake (Control Valve) *)\nsigData_au8[1] := i_CtrlValve_u8;\n\nIF (0 = bds_can_sendSignal(ComConf_ComSignal_ComSignal_ParkingBrakeSwitch_xTx, ADR(sigData_au8), 0)) THEN\n    (* ok,message is sent on bus with updated signal data *)\n    ;\nEND_IF\n",
+                  "LineInfoPersistence": "(string)05a845ba-01ae-4ea1-9ea4-79990db22961_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "Interface": {
+            "@Type": "a9ed5b7e",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * Program: PRG_CANOut\n *\n * Author:  \n *\n * Description:\n * Interface for CAN Transmitting\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nPROGRAM PRG_CANOut\nVAR\n    (* Buffer for rx databoxes *)\n    CAN1RxData_astruc   : ARRAY[1..2] OF bds_can_DataboxData_ts;\n    CAN2RxData_astruc   : ARRAY[1..5] OF bds_can_DataboxData_ts;\n    bds_IPduGrpVctr_au8 : ARRAY[0..7] OF USINT;\n    retSet_u16          : UINT;\n    retStrt_u16         : UINT;\n    data_au8            : ARRAY[1..8] OF USINT;\n    dataTx_au8          : ARRAY[1..8] OF USINT; (* data ARRAY FOR CAN legacy data*)\n    sigData_au8         : ARRAY[1..8] OF USINT; (* data ARRAY FOR CAN signal based data*)\nEND_VAR\nVAR_INPUT\n    i_statusNvmIni_u16  : UINT;\n    i_iPmpFwdAct_mA_u16 : UINT;\n    i_iPmpFwdSet_mA_u16 : UINT;\n    i_CtrlValve_u8      : USINT;\n    i_rxActEngPercTq_u8 : USINT;\n    i_vWhlSpd_kph_u16   : INT;\n    i_uPmpSnsr_mV_u16   : UINT;\n    i_frqVehSnsr_Hz_u32 : UDINT;\n    i_anValue_perc_u8   : USINT;\n    i_stBrkSwt_u8       : USINT;\nEND_VAR\nVAR_OUTPUT\nEND_VAR\n",
+                  "LineInfoPersistence": "(string)05a845ba-01ae-4ea1-9ea4-79990db22961_Decl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)360",
+          "POULevel": {
+            "@Type": "8e575c5b:Enum",
+            "@Value": "Standard"
+          },
+          "ChildObjectGuids": {
+            "@Type": "ArrayList:IList",
+            "@Value": []
+          },
+          "AddAttributeSubsequent": "(bool)False"
+        }
+      },
+      "TypeInfos": {
+        "0db3d7bb": "{0db3d7bb-cde0-4416-9a7b-ce49a0124323}",
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "6f9dac99": "{6f9dac99-8de1-4efc-8465-68ac443b7d08}",
+        "8e575c5b": "{8e575c5b-1d37-49c6-941b-5c0ec7874787}",
+        "a9ed5b7e": "{a9ed5b7e-75c5-4651-af16-d2c27e98cb94}",
+        "ArrayList": "System.Collections.ArrayList",
+        "bool": "System.Boolean",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

@@ -1,1 +1,58 @@
-﻿{"payload":{"meta":{"Graph":{"@Type":"81297157","@Value":{"Guid":"(Guid)c5fe01ab-a015-4b56-b09d-cd604b485024","ParentGuid":"(Guid)18646e65-95a2-4b2e-b6a4-7ca4b42201cf","Name":"(string)ACT_ClrDFESEntry","Properties":{"@Type":"2c41fa04:IDictionary","@Value":{}},"TypeGuid":"(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2","EmbeddedTypeGuids":{"@Type":"[Guid]","@Value":["(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"]}}},"TypeInfos":{"2c41fa04":"{2c41fa04-1834-41c1-816e-303c7aa2c05b}","81297157":"{81297157-7ec9-45ce-845e-84cab2b88ade}","Guid":"System.Guid","string":"System.String"}},"object":{"Graph":{"@Type":"8ac092e5","@Value":{"Implementation":{"@Type":"3b83b776","@Value":{"TextDocument":{"@Type":"f3878285","@Value":{"TextBlobForSerialisation":"(string)(* Action: ErrMemMgr_clrDfesEntr *)\nidxActEntry_u8 := ErrMemMgr_stNoEntryAvl_DU8; (* Actual index entry *)\n(* delete DTCs when maximum number of entries are exceeded *)\nIF ErrMemMgr_s.nrDfesEntr_u8 > ErrMemMgr_nrMaxErrEntry_DU8 THEN\n    ErrMemMgr_s.tiOldStamp_u32 := 16#FFFFFFFF;\n    (* delete DTCs when maximum number of entries are exceeded *)\n    FOR cntrApplBuf_u8 := 0 TO ErrMemMgr_nrDfesEntries_DU8 - 1 DO\n        IF (ErrMemMgr_s.tiOldStamp_u32 > ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[cntrApplBuf_u8].tiStamp_min_u32) AND\n           (0 < ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[cntrApplBuf_u8].tiStamp_min_u32) THEN\n            ErrMemMgr_s.tiOldStamp_u32 := ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[cntrApplBuf_u8].tiStamp_min_u32;\n            idxActEntry_u8             := cntrApplBuf_u8;\n        END_IF;\n    END_FOR;\n\n    IF idxActEntry_u8 <> ErrMemMgr_stNoEntryAvl_DU8 THEN\n        (* Remove oldest previously active or deactive DTC from DFES *)\n        ErrMemMgr_s.status_au16[idxActEntry_u8] :=\n            ErrMemMgr_s.status_au16[idxActEntry_u8] OR\n            UINT_TO_WORD(bds_dsm_delError_DTC(UDINT_TO_UINT(ErrMemMgr_s.ErrMemMgr_savePrm_s\n                                                                .ErrMemMgr_prevActvDfes_as[idxActEntry_u8].idxPrevActvDfes_u32)));\n\n        ErrMemMgr_s.clrCntr_au8[idxActEntry_u8] := ErrMemMgr_s.clrCntr_au8[idxActEntry_u8] + 1;\n        (* remove oldest DFC from the application buffer *)\n        ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[idxActEntry_u8].idxPrevActvDfes_u32 := 0;\n        ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[idxActEntry_u8].tiStamp_min_u32     := 0;\n    END_IF;\nEND_IF;\n","LineInfoPersistence":"(string)c5fe01ab-a015-4b56-b09d-cd604b485024_Impl_LineIds"}}}},"UniqueIdGenerator":"(string)87"}},"TypeInfos":{"3b83b776":"{3b83b776-fb25-43b8-99f2-3c507c9143fc}","8ac092e5":"{8ac092e5-3128-4e26-9e7e-11016c6684f2}","f3878285":"{f3878285-8e4f-490b-bb1b-9acbb7eb04db}","string":"System.String"}}},"FormatVersion":"1.0"}
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)c5fe01ab-a015-4b56-b09d-cd604b485024",
+          "ParentGuid": "(Guid)18646e65-95a2-4b2e-b6a4-7ca4b42201cf",
+          "Name": "(string)ACT_ClrDFESEntry",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "8ac092e5",
+        "@Value": {
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(* Action: ErrMemMgr_clrDfesEntr *)\nidxActEntry_u8 := ErrMemMgr_stNoEntryAvl_DU8; (* Actual index entry *)\n(* delete DTCs when maximum number of entries are exceeded *)\nIF ErrMemMgr_s.nrDfesEntr_u8 > ErrMemMgr_nrMaxErrEntry_DU8 THEN\n    ErrMemMgr_s.tiOldStamp_u32 := 16#FFFFFFFF;\n    (* delete DTCs when maximum number of entries are exceeded *)\n    FOR cntrApplBuf_u8 := 0 TO ErrMemMgr_nrDfesEntries_DU8 - 1 DO\n        IF (ErrMemMgr_s.tiOldStamp_u32 > ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[cntrApplBuf_u8].tiStamp_min_u32) AND\n           (0 < ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[cntrApplBuf_u8].tiStamp_min_u32) THEN\n            ErrMemMgr_s.tiOldStamp_u32 := ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[cntrApplBuf_u8].tiStamp_min_u32;\n            idxActEntry_u8             := cntrApplBuf_u8;\n        END_IF;\n    END_FOR;\n\n    IF idxActEntry_u8 <> ErrMemMgr_stNoEntryAvl_DU8 THEN\n        (* Remove oldest previously active or deactive DTC from DFES *)\n        ErrMemMgr_s.status_au16[idxActEntry_u8] :=\n            ErrMemMgr_s.status_au16[idxActEntry_u8] OR\n            UINT_TO_WORD(bds_dsm_delError_DTC(UDINT_TO_UINT(ErrMemMgr_s.ErrMemMgr_savePrm_s\n                                                                .ErrMemMgr_prevActvDfes_as[idxActEntry_u8].idxPrevActvDfes_u32)));\n\n        ErrMemMgr_s.clrCntr_au8[idxActEntry_u8] := ErrMemMgr_s.clrCntr_au8[idxActEntry_u8] + 1;\n        (* remove oldest DFC from the application buffer *)\n        ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[idxActEntry_u8].idxPrevActvDfes_u32 := 0;\n        ErrMemMgr_s.ErrMemMgr_savePrm_s.ErrMemMgr_prevActvDfes_as[idxActEntry_u8].tiStamp_min_u32     := 0;\n    END_IF;\nEND_IF;\n",
+                  "LineInfoPersistence": "(string)c5fe01ab-a015-4b56-b09d-cd604b485024_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)87"
+        }
+      },
+      "TypeInfos": {
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "8ac092e5": "{8ac092e5-3128-4e26-9e7e-11016c6684f2}",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

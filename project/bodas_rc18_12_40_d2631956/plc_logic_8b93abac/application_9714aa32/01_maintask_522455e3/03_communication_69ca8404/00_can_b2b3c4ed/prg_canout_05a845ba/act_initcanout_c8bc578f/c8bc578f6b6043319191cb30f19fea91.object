@@ -1,1 +1,58 @@
-﻿{"payload":{"meta":{"Graph":{"@Type":"81297157","@Value":{"Guid":"(Guid)c8bc578f-6b60-4331-9191-cb30f19fea91","ParentGuid":"(Guid)05a845ba-01ae-4ea1-9ea4-79990db22961","Name":"(string)ACT_InitCANOut","Properties":{"@Type":"2c41fa04:IDictionary","@Value":{}},"TypeGuid":"(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2","EmbeddedTypeGuids":{"@Type":"[Guid]","@Value":["(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"]}}},"TypeInfos":{"2c41fa04":"{2c41fa04-1834-41c1-816e-303c7aa2c05b}","81297157":"{81297157-7ec9-45ce-845e-84cab2b88ade}","Guid":"System.Guid","string":"System.String"}},"object":{"Graph":{"@Type":"8ac092e5","@Value":{"Implementation":{"@Type":"3b83b776","@Value":{"TextDocument":{"@Type":"f3878285","@Value":{"TextBlobForSerialisation":"(string)(* ----------------------------------------------------------------------- *)\n(* --- Initialisation CAN signal based --- *)\n(* ----------------------------------------------------------------------- *)\n(* Set the Transmit I-PDU and corresponding groups (e.g. CCVS) as defined in eC *)\nretSet_u16 := bds_can_setMsgGroup(ADR(bds_IPduGrpVctr_au8), ComConf_ComIPduGroup_ComIPduGroup_CAN_2_Tx, BOOL_TO_USINT(TRUE));\n(* Set the Receive I-PDU and corresponding groups (e.g. EngCtrl1) as defined in eC *)\nretSet_u16 := bds_can_setMsgGroup(ADR(bds_IPduGrpVctr_au8), ComConf_ComIPduGroup_ComIPduGroup_CAN_2_Rx, BOOL_TO_USINT(TRUE));\n(* activate the groups *)\n(* !!!*)\nretStrt_u16 := bds_can_startAllMsgGroups(ADR(bds_IPduGrpVctr_au8), 1);\n(* Send a STD CAN message on CAN 2 when in Ini *)\ndata_au8[1] := UINT_TO_USINT(retSet_u16);\ndata_au8[2] := UINT_TO_USINT(SHR(retSet_u16, 8));\ndata_au8[3] := UINT_TO_USINT(retStrt_u16);\ndata_au8[4] := UINT_TO_USINT(SHR(retStrt_u16, 8));\ndata_au8[5] := UINT_TO_USINT(i_statusNvmIni_u16);\ndata_au8[6] := UINT_TO_USINT(SHR(i_statusNvmIni_u16, 8));\ndata_au8[7] := BOOL_TO_USINT(GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgXcpOn_b);\ndata_au8[8] := BOOL_TO_USINT(GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgStoreDataToNvm_b);\nbds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#1, BDS_CAN_STD_DU8, 8, ADR(data_au8));\n","LineInfoPersistence":"(string)c8bc578f-6b60-4331-9191-cb30f19fea91_Impl_LineIds"}}}},"UniqueIdGenerator":"(string)102"}},"TypeInfos":{"3b83b776":"{3b83b776-fb25-43b8-99f2-3c507c9143fc}","8ac092e5":"{8ac092e5-3128-4e26-9e7e-11016c6684f2}","f3878285":"{f3878285-8e4f-490b-bb1b-9acbb7eb04db}","string":"System.String"}}},"FormatVersion":"1.0"}
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)c8bc578f-6b60-4331-9191-cb30f19fea91",
+          "ParentGuid": "(Guid)05a845ba-01ae-4ea1-9ea4-79990db22961",
+          "Name": "(string)ACT_InitCANOut",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "8ac092e5",
+        "@Value": {
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(* ----------------------------------------------------------------------- *)\n(* --- Initialisation CAN signal based --- *)\n(* ----------------------------------------------------------------------- *)\n(* Set the Transmit I-PDU and corresponding groups (e.g. CCVS) as defined in eC *)\nretSet_u16 := bds_can_setMsgGroup(ADR(bds_IPduGrpVctr_au8), ComConf_ComIPduGroup_ComIPduGroup_CAN_2_Tx, BOOL_TO_USINT(TRUE));\n(* Set the Receive I-PDU and corresponding groups (e.g. EngCtrl1) as defined in eC *)\nretSet_u16 := bds_can_setMsgGroup(ADR(bds_IPduGrpVctr_au8), ComConf_ComIPduGroup_ComIPduGroup_CAN_2_Rx, BOOL_TO_USINT(TRUE));\n(* activate the groups *)\n(* !!!*)\nretStrt_u16 := bds_can_startAllMsgGroups(ADR(bds_IPduGrpVctr_au8), 1);\n(* Send a STD CAN message on CAN 2 when in Ini *)\ndata_au8[1] := UINT_TO_USINT(retSet_u16);\ndata_au8[2] := UINT_TO_USINT(SHR(retSet_u16, 8));\ndata_au8[3] := UINT_TO_USINT(retStrt_u16);\ndata_au8[4] := UINT_TO_USINT(SHR(retStrt_u16, 8));\ndata_au8[5] := UINT_TO_USINT(i_statusNvmIni_u16);\ndata_au8[6] := UINT_TO_USINT(SHR(i_statusNvmIni_u16, 8));\ndata_au8[7] := BOOL_TO_USINT(GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgXcpOn_b);\ndata_au8[8] := BOOL_TO_USINT(GlobalVariables.PrmAsw_gstruc.PrmDbg_struc.flgStoreDataToNvm_b);\nbds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#1, BDS_CAN_STD_DU8, 8, ADR(data_au8));\n",
+                  "LineInfoPersistence": "(string)c8bc578f-6b60-4331-9191-cb30f19fea91_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)102"
+        }
+      },
+      "TypeInfos": {
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "8ac092e5": "{8ac092e5-3128-4e26-9e7e-11016c6684f2}",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}

@@ -1,1 +1,58 @@
-﻿{"payload":{"meta":{"Graph":{"@Type":"81297157","@Value":{"Guid":"(Guid)d04370c7-0026-4864-83c7-ba097ea0c450","ParentGuid":"(Guid)13a3de95-79c4-4593-965c-733fe13c5589","Name":"(string)ERRORS","Properties":{"@Type":"2c41fa04:IDictionary","@Value":{}},"TypeGuid":"(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2","EmbeddedTypeGuids":{"@Type":"[Guid]","@Value":["(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"]}}},"TypeInfos":{"2c41fa04":"{2c41fa04-1834-41c1-816e-303c7aa2c05b}","81297157":"{81297157-7ec9-45ce-845e-84cab2b88ade}","Guid":"System.Guid","string":"System.String"}},"object":{"Graph":{"@Type":"8ac092e5","@Value":{"Implementation":{"@Type":"3b83b776","@Value":{"TextDocument":{"@Type":"f3878285","@Value":{"TextBlobForSerialisation":"(string)(******************************************************************************)\n(******************** Error Handling  *****************************************)\n(******************************************************************************)\nPRG_HandleErrors(i_stPmpSnsrSigInvldErr_e := PRG_Inputs.stPmpSnsrSigInvldErr_e,\n                 i_stBrkSwtSigInvldErr_e  := PRG_Inputs.stBrkSwtSigInvldErr_e,\n                 i_uPmpSnsr_mV_u16        := PRG_Inputs.uPmpSnsr_mV_u16,\n                 i_frqVehSnsr_Hz_u32      := UDINT_TO_UINT(PRG_Inputs.frqVehSnsr_Hz_u32),\n                 i_iPmpFwdAct_mA_u16      := PRG_Outputs.no_CurrentK07_mA_u16,\n                 i_vWhlSpd_kmh_u16        := PRG_Inputs.vWhlSpd_kph_u16);\n\n(******************************************************************************)\n(******************** Error Memory Workaround *********************************)\n(******************************************************************************)\nPRG_ErrMemMgr();\n","LineInfoPersistence":"(string)d04370c7-0026-4864-83c7-ba097ea0c450_Impl_LineIds"}}}},"UniqueIdGenerator":"(string)52"}},"TypeInfos":{"3b83b776":"{3b83b776-fb25-43b8-99f2-3c507c9143fc}","8ac092e5":"{8ac092e5-3128-4e26-9e7e-11016c6684f2}","f3878285":"{f3878285-8e4f-490b-bb1b-9acbb7eb04db}","string":"System.String"}}},"FormatVersion":"1.0"}
+{
+  "payload": {
+    "meta": {
+      "Graph": {
+        "@Type": "81297157",
+        "@Value": {
+          "Guid": "(Guid)d04370c7-0026-4864-83c7-ba097ea0c450",
+          "ParentGuid": "(Guid)13a3de95-79c4-4593-965c-733fe13c5589",
+          "Name": "(string)ERRORS",
+          "Properties": {
+            "@Type": "2c41fa04:IDictionary",
+            "@Value": {}
+          },
+          "TypeGuid": "(Guid)8ac092e5-3128-4e26-9e7e-11016c6684f2",
+          "EmbeddedTypeGuids": {
+            "@Type": "[Guid]",
+            "@Value": [
+              "(Guid)3b83b776-fb25-43b8-99f2-3c507c9143fc"
+            ]
+          }
+        }
+      },
+      "TypeInfos": {
+        "2c41fa04": "{2c41fa04-1834-41c1-816e-303c7aa2c05b}",
+        "81297157": "{81297157-7ec9-45ce-845e-84cab2b88ade}",
+        "Guid": "System.Guid",
+        "string": "System.String"
+      }
+    },
+    "object": {
+      "Graph": {
+        "@Type": "8ac092e5",
+        "@Value": {
+          "Implementation": {
+            "@Type": "3b83b776",
+            "@Value": {
+              "TextDocument": {
+                "@Type": "f3878285",
+                "@Value": {
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** Error Handling  *****************************************)\n(******************************************************************************)\nPRG_HandleErrors(i_stPmpSnsrSigInvldErr_e := PRG_Inputs.stPmpSnsrSigInvldErr_e,\n                 i_stBrkSwtSigInvldErr_e  := PRG_Inputs.stBrkSwtSigInvldErr_e,\n                 i_uPmpSnsr_mV_u16        := PRG_Inputs.uPmpSnsr_mV_u16,\n                 i_frqVehSnsr_Hz_u32      := UDINT_TO_UINT(PRG_Inputs.frqVehSnsr_Hz_u32),\n                 i_iPmpFwdAct_mA_u16      := PRG_Outputs.no_CurrentK07_mA_u16,\n                 i_vWhlSpd_kmh_u16        := PRG_Inputs.vWhlSpd_kph_u16);\n\n(******************************************************************************)\n(******************** Error Memory Workaround *********************************)\n(******************************************************************************)\nPRG_ErrMemMgr();\n",
+                  "LineInfoPersistence": "(string)d04370c7-0026-4864-83c7-ba097ea0c450_Impl_LineIds"
+                }
+              }
+            }
+          },
+          "UniqueIdGenerator": "(string)52"
+        }
+      },
+      "TypeInfos": {
+        "3b83b776": "{3b83b776-fb25-43b8-99f2-3c507c9143fc}",
+        "8ac092e5": "{8ac092e5-3128-4e26-9e7e-11016c6684f2}",
+        "f3878285": "{f3878285-8e4f-490b-bb1b-9acbb7eb04db}",
+        "string": "System.String"
+      }
+    }
+  },
+  "FormatVersion": "1.0"
+}
