@@ -57,13 +57,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)TYPE struc_MngInhb : STRUCT\n        st_flgUBattLowDetd_b : BOOL;\n        st_flgInhbActv_b     : BOOL;\n        st_flgOutpLockd_b    : BOOL;\n        UBatt_mV_u16         : UINT;\n        NrCycDebRst_u16      : UINT;\n    END_STRUCT\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)TYPE struc_MngInhb : STRUCT\n\t\tst_flgUBattLowDetd_b : BOOL;\n\t\tst_flgInhbActv_b     : BOOL;\n\t\tst_flgOutpLockd_b    : BOOL;\n\t\tUBatt_mV_u16         : UINT;\n\t\tNrCycDebRst_u16      : UINT;\n\tEND_STRUCT\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)a3d4255a-051f-4047-a453-1cf02196fee2_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)42"
+          "UniqueIdGenerator": "(string)50"
         }
       },
       "TypeInfos": {

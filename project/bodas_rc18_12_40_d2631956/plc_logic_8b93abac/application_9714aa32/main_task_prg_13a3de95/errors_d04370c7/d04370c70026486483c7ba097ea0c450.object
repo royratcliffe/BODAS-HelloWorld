@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** Error Handling  *****************************************)\n(******************************************************************************)\nPRG_HandleErrors(i_stPmpSnsrSigInvldErr_e := PRG_Inputs.stPmpSnsrSigInvldErr_e,\n                 i_stBrkSwtSigInvldErr_e  := PRG_Inputs.stBrkSwtSigInvldErr_e,\n                 i_uPmpSnsr_mV_u16        := PRG_Inputs.uPmpSnsr_mV_u16,\n                 i_frqVehSnsr_Hz_u32      := UDINT_TO_UINT(PRG_Inputs.frqVehSnsr_Hz_u32),\n                 i_iPmpFwdAct_mA_u16      := PRG_Outputs.no_CurrentK07_mA_u16,\n                 i_vWhlSpd_kmh_u16        := PRG_Inputs.vWhlSpd_kph_u16);\n\n(******************************************************************************)\n(******************** Error Memory Workaround *********************************)\n(******************************************************************************)\nPRG_ErrMemMgr();\n",
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** Error Handling  *****************************************)\n(******************************************************************************)\nPRG_HandleErrors(i_stPmpSnsrSigInvldErr_e := PRG_Inputs.stPmpSnsrSigInvldErr_e,\n\t             i_stBrkSwtSigInvldErr_e  := PRG_Inputs.stBrkSwtSigInvldErr_e,\n\t             i_uPmpSnsr_mV_u16        := PRG_Inputs.uPmpSnsr_mV_u16,\n\t             i_frqVehSnsr_Hz_u32      := UDINT_TO_UINT(PRG_Inputs.frqVehSnsr_Hz_u32),\n\t             i_iPmpFwdAct_mA_u16      := PRG_Outputs.no_CurrentK07_mA_u16,\n\t             i_vWhlSpd_kmh_u16        := PRG_Inputs.vWhlSpd_kph_u16);\n\n(******************************************************************************)\n(******************** Error Memory Workaround *********************************)\n(******************************************************************************)\nPRG_ErrMemMgr();\n",
                   "LineInfoPersistence": "(string)d04370c7-0026-4864-83c7-ba097ea0c450_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)52"
+          "UniqueIdGenerator": "(string)94"
         }
       },
       "TypeInfos": {

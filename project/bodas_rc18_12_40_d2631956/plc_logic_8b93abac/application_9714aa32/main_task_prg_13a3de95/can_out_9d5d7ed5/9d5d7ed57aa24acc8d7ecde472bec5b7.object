@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** CAN OUTPUT  *********************************************)\n(******************************************************************************)\nPRG_CANOut(i_statusNvmIni_u16  := PRG_NVMConfig.status_u16,\n           i_iPmpFwdAct_mA_u16 := PRG_Outputs.no_CurrentK07_mA_u16,\n           i_iPmpFwdSet_mA_u16 := PRG_Outputs.iPmpFwdSet_mA_u16,\n           i_CtrlValve_u8      := PRG_Outputs.st_CtrlValve_u8,\n           i_rxActEngPercTq_u8 := PRG_CANIn.o_rxActEngPercTq_u8,\n           i_vWhlSpd_kph_u16   := UINT_TO_INT(PRG_Inputs.vWhlSpd_kph_u16),\n           i_uPmpSnsr_mV_u16   := PRG_Inputs.uPmpSnsr_mV_u16,\n           i_frqVehSnsr_Hz_u32 := PRG_Inputs.frqVehSnsr_Hz_u32,\n           i_anValue_perc_u8   := GlobalVariables.anValue_perc_gu8,\n           i_stBrkSwt_u8       := PRG_Outputs.st_BrkSwt_u8);\n",
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** CAN OUTPUT  *********************************************)\n(******************************************************************************)\nPRG_CANOut(i_statusNvmIni_u16  := PRG_NVMConfig.status_u16,\n\t       i_iPmpFwdAct_mA_u16 := PRG_Outputs.no_CurrentK07_mA_u16,\n\t       i_iPmpFwdSet_mA_u16 := PRG_Outputs.iPmpFwdSet_mA_u16,\n\t       i_CtrlValve_u8      := PRG_Outputs.st_CtrlValve_u8,\n\t       i_rxActEngPercTq_u8 := PRG_CANIn.o_rxActEngPercTq_u8,\n\t       i_vWhlSpd_kph_u16   := UINT_TO_INT(PRG_Inputs.vWhlSpd_kph_u16),\n\t       i_uPmpSnsr_mV_u16   := PRG_Inputs.uPmpSnsr_mV_u16,\n\t       i_frqVehSnsr_Hz_u32 := PRG_Inputs.frqVehSnsr_Hz_u32,\n\t       i_anValue_perc_u8   := GlobalVariables.anValue_perc_gu8,\n\t       i_stBrkSwt_u8       := PRG_Outputs.st_BrkSwt_u8);\n",
                   "LineInfoPersistence": "(string)9d5d7ed5-7aa2-4acc-8d7e-cde472bec5b7_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)46"
+          "UniqueIdGenerator": "(string)85"
         }
       },
       "TypeInfos": {

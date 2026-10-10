@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_out_do_signal_te : (\n        OUT_DO_START_SIGNALS := 16#100,\n        OUT_DO_START         := 16#FF,\n        K13,\n        A04,\n        A10,\n        A56,\n        A11,\n        A55,\n        A01,\n        A06,\n        A16,\n        A58,\n        A49,\n        A50,\n        K84,\n        K85,\n        K86,\n        K87,\n        OUT_DO_NUM_SIGNALS,\n        OUT_DO_FSC_NUM_SIGNALS := K84\n    ) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_out_do_signal_te : (\n\t\tOUT_DO_START_SIGNALS := 16#100,\n\t\tOUT_DO_START         := 16#FF,\n\t\tK13,\n\t\tA04,\n\t\tA10,\n\t\tA56,\n\t\tA11,\n\t\tA55,\n\t\tA01,\n\t\tA06,\n\t\tA16,\n\t\tA58,\n\t\tA49,\n\t\tA50,\n\t\tK84,\n\t\tK85,\n\t\tK86,\n\t\tK87,\n\t\tOUT_DO_NUM_SIGNALS,\n\t\tOUT_DO_FSC_NUM_SIGNALS := K84\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)6d6de164-a735-4fbc-9965-c5086ce9669c_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)77"
+          "UniqueIdGenerator": "(string)102"
         }
       },
       "TypeInfos": {

@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_in_phase_signal_te : (\n        IN_PHASE_START_SIGNALS := 16#900,\n        IN_PHASE_START         := 16#8FF,\n        K55_VI_K61_VI,\n        IN_PHASE_NUM_SIGNALS\n    ) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_in_phase_signal_te : (\n\t\tIN_PHASE_START_SIGNALS := 16#900,\n\t\tIN_PHASE_START         := 16#8FF,\n\t\tK55_VI_K61_VI,\n\t\tIN_PHASE_NUM_SIGNALS\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)ec218b25-cca0-47ea-848e-2189493d7ea1_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)29"
+          "UniqueIdGenerator": "(string)38"
         }
       },
       "TypeInfos": {

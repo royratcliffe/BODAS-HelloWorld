@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_in_aiv_signal_te : (\n        IN_AIV_START_SIGNALS := 16#500,\n        IN_AIV_START         := 16#4FF,\n        K52,\n        K60,\n        K43,\n        K54,\n        K55,\n        K39,\n        K38,\n        K40,\n        K42,\n        K37,\n        K61,\n        K45,\n        K44,\n        A21,\n        A36,\n        A37,\n        A38,\n        A39,\n        K30,\n        A43,\n        A22,\n        A23,\n        A24,\n        K78,\n        K76,\n        K74,\n        K77,\n        K10,\n        K75,\n        K31,\n        K34,\n        A13,\n        A40,\n        A41,\n        A42,\n        A25,\n        A26,\n        A27,\n        A14,\n        A57,\n        A28,\n        A29,\n        K11,\n        K35,\n        IN_AIV_NUM_SIGNALS,\n        IN_AIV_FLEXIN_NUM_SIGNALS := K78\n    ) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_in_aiv_signal_te : (\n\t\tIN_AIV_START_SIGNALS := 16#500,\n\t\tIN_AIV_START         := 16#4FF,\n\t\tK52,\n\t\tK60,\n\t\tK43,\n\t\tK54,\n\t\tK55,\n\t\tK39,\n\t\tK38,\n\t\tK40,\n\t\tK42,\n\t\tK37,\n\t\tK61,\n\t\tK45,\n\t\tK44,\n\t\tA21,\n\t\tA36,\n\t\tA37,\n\t\tA38,\n\t\tA39,\n\t\tK30,\n\t\tA43,\n\t\tA22,\n\t\tA23,\n\t\tA24,\n\t\tK78,\n\t\tK76,\n\t\tK74,\n\t\tK77,\n\t\tK10,\n\t\tK75,\n\t\tK31,\n\t\tK34,\n\t\tA13,\n\t\tA40,\n\t\tA41,\n\t\tA42,\n\t\tA25,\n\t\tA26,\n\t\tA27,\n\t\tA14,\n\t\tA57,\n\t\tA28,\n\t\tA29,\n\t\tK11,\n\t\tK35,\n\t\tIN_AIV_NUM_SIGNALS,\n\t\tIN_AIV_FLEXIN_NUM_SIGNALS := K78\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)5f185c00-17bc-445b-8d50-4e1f7ad1b040_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)161"
+          "UniqueIdGenerator": "(string)214"
         }
       },
       "TypeInfos": {

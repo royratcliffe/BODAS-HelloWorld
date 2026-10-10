@@ -57,13 +57,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)TYPE struc_DbgMgrPrv : STRUCT\n        stErrDetn_u32           : UDINT; (* Status error detection *)\n        flgStoreDataToNvmPrev_l : BOOL;  (* Flag TO store data TO NVM *)\n    END_STRUCT\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)TYPE struc_DbgMgrPrv : STRUCT\n\t\tstErrDetn_u32           : UDINT; (* Status error detection *)\n\t\tflgStoreDataToNvmPrev_l : BOOL;  (* Flag TO store data TO NVM *)\n\tEND_STRUCT\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)0150129f-1dd2-4b72-9600-595db640a7d2_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)18"
+          "UniqueIdGenerator": "(string)23"
         }
       },
       "TypeInfos": {

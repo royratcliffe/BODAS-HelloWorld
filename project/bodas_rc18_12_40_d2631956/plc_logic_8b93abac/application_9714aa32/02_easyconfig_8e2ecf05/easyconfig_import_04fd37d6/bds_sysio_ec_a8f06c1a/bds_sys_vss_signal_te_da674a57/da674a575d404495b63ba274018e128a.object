@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sys_vss_signal_te : (\n        SYS_VSS_START_SIGNALS := 16#C00,\n        SYS_VSS_START         := 16#BFF,\n        VSS1,\n        VSS2,\n        VSS3,\n        VSS4,\n        SYS_VSS_NUM_SIGNALS,\n        SYS_VSS_CY_NUM_SIGNALS := VSS3\n    ) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sys_vss_signal_te : (\n\t\tSYS_VSS_START_SIGNALS := 16#C00,\n\t\tSYS_VSS_START         := 16#BFF,\n\t\tVSS1,\n\t\tVSS2,\n\t\tVSS3,\n\t\tVSS4,\n\t\tSYS_VSS_NUM_SIGNALS,\n\t\tSYS_VSS_CY_NUM_SIGNALS := VSS3\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)da674a57-5d40-4495-b63b-a274018e128a_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)41"
+          "UniqueIdGenerator": "(string)54"
         }
       },
       "TypeInfos": {

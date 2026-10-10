@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(* ----------------------------------------------------------------------- *)\n(* --- Initialisation CAN legacy receive --- *)\n(* ----------------------------------------------------------------------- *)\n//bds_can_initRxDatabox(BDS_CAN_1_D, 1, 16#5, BDS_CAN_STD_DU8, 8, ADR(CAN1RxData_astruc), 1, ADR(FUNC_Can1RxDatabox1_Cbk));\nbds_can_initRxDatabox(bds_can_Chnl_te.BDS_CAN_2_D,\n                      1,\n                      16#18FF1128,\n                      BDS_CAN_EXD_DU8,\n                      8,\n                      ADR(CAN2RxData_astruc),\n                      1,\n                      ADR(FUNC_Can2RxDatabox1_Cbk));\n",
+                  "TextBlobForSerialisation": "(string)(* ----------------------------------------------------------------------- *)\n(* --- Initialisation CAN legacy receive --- *)\n(* ----------------------------------------------------------------------- *)\n//bds_can_initRxDatabox(BDS_CAN_1_D, 1, 16#5, BDS_CAN_STD_DU8, 8, ADR(CAN1RxData_astruc), 1, ADR(FUNC_Can1RxDatabox1_Cbk));\nbds_can_initRxDatabox(bds_can_Chnl_te.BDS_CAN_2_D,\n\t                  1,\n\t                  16#18FF1128,\n\t                  BDS_CAN_EXD_DU8,\n\t                  8,\n\t                  ADR(CAN2RxData_astruc),\n\t                  1,\n\t                  ADR(FUNC_Can2RxDatabox1_Cbk));\n",
                   "LineInfoPersistence": "(string)431e0303-ca45-4604-aee8-75fc5ff39217_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)31"
+          "UniqueIdGenerator": "(string)55"
         }
       },
       "TypeInfos": {

@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_out_po_signal_te : (\n        OUT_PO_START_SIGNALS := 16#200,\n        OUT_PO_START         := 16#1FF,\n        K07,\n        K09,\n        K73,\n        K08,\n        K29,\n        K17,\n        A32,\n        A47,\n        A31,\n        A48,\n        A46,\n        A33,\n        A34,\n        A51,\n        A35,\n        A53,\n        A52,\n        A54,\n        K16,\n        K14,\n        K15,\n        A19,\n        A05,\n        A20,\n        A09,\n        A02,\n        A17,\n        K51,\n        K12,\n        A03,\n        A18,\n        A08,\n        A07,\n        K80,\n        K81,\n        K82,\n        K83,\n        OUT_PO_NUM_SIGNALS,\n        OUT_PO_FSC_NUM_SIGNALS    := K80,\n        OUT_PO_FSC_HS_NUM_SIGNALS := K16\n    ) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_out_po_signal_te : (\n\t\tOUT_PO_START_SIGNALS := 16#200,\n\t\tOUT_PO_START         := 16#1FF,\n\t\tK07,\n\t\tK09,\n\t\tK73,\n\t\tK08,\n\t\tK29,\n\t\tK17,\n\t\tA32,\n\t\tA47,\n\t\tA31,\n\t\tA48,\n\t\tA46,\n\t\tA33,\n\t\tA34,\n\t\tA51,\n\t\tA35,\n\t\tA53,\n\t\tA52,\n\t\tA54,\n\t\tK16,\n\t\tK14,\n\t\tK15,\n\t\tA19,\n\t\tA05,\n\t\tA20,\n\t\tA09,\n\t\tA02,\n\t\tA17,\n\t\tK51,\n\t\tK12,\n\t\tA03,\n\t\tA18,\n\t\tA08,\n\t\tA07,\n\t\tK80,\n\t\tK81,\n\t\tK82,\n\t\tK83,\n\t\tOUT_PO_NUM_SIGNALS,\n\t\tOUT_PO_FSC_NUM_SIGNALS    := K80,\n\t\tOUT_PO_FSC_HS_NUM_SIGNALS := K16\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)a848742b-bee1-4bcd-8748-14fec0a6d215_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)143"
+          "UniqueIdGenerator": "(string)190"
         }
       },
       "TypeInfos": {

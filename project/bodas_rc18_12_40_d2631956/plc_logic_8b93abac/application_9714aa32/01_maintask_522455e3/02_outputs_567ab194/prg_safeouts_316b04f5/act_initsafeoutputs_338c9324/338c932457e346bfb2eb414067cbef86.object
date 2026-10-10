@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(*configure SAFOUT with PHMDL mode (HS1 - K09, HS2 - K73 AND LS - K14)*)\nbds_out_po_cfg(bds_out_po_signal_te.K09, STD_ON); (* Configure K09 for POC *)\nbds_out_po_cfg(bds_out_po_signal_te.K73, STD_ON); (* Configure K73 for POC *)\nbds_safout_cfg(UDINT_TO_UINT(PHMDL_CHNL1),\n               bds_out_po_signal_te.K14,\n               bds_out_po_signal_te.K09,\n               bds_out_po_signal_te.K73,\n               0,\n               0);\n",
+                  "TextBlobForSerialisation": "(string)(*configure SAFOUT with PHMDL mode (HS1 - K09, HS2 - K73 AND LS - K14)*)\nbds_out_po_cfg(bds_out_po_signal_te.K09, STD_ON); (* Configure K09 for POC *)\nbds_out_po_cfg(bds_out_po_signal_te.K73, STD_ON); (* Configure K73 for POC *)\nbds_safout_cfg(UDINT_TO_UINT(PHMDL_CHNL1),\n\t           bds_out_po_signal_te.K14,\n\t           bds_out_po_signal_te.K09,\n\t           bds_out_po_signal_te.K73,\n\t           0,\n\t           0);\n",
                   "LineInfoPersistence": "(string)338c9324-57e3-46bf-b2eb-414067cbef86_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)27"
+          "UniqueIdGenerator": "(string)45"
         }
       },
       "TypeInfos": {

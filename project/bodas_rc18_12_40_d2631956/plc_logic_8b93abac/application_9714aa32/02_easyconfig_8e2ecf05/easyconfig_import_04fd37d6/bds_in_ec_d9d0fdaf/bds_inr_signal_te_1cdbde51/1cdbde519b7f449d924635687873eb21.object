@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)///Definition of input signals for Resistance\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_inR_signal_te : (\n        bds_inR_K41_E := 0,\n        bds_inR_K65_E,\n        bds_inR_K63_E,\n        bds_inR_K64_E,\n        bds_inR_K32_E,\n        bds_inR_K33_E,\n        bds_inR_numSignal_E\n    ) USINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)///Definition of input signals for Resistance\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_inR_signal_te : (\n\t\tbds_inR_K41_E := 0,\n\t\tbds_inR_K65_E,\n\t\tbds_inR_K63_E,\n\t\tbds_inR_K64_E,\n\t\tbds_inR_K32_E,\n\t\tbds_inR_K33_E,\n\t\tbds_inR_numSignal_E\n\t) USINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)1cdbde51-9b7f-449d-9246-35687873eb21_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)41"
+          "UniqueIdGenerator": "(string)54"
         }
       },
       "TypeInfos": {

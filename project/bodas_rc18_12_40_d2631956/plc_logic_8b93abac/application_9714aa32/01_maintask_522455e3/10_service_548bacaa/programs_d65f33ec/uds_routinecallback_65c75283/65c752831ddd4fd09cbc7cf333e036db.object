@@ -62,7 +62,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(* here check th security level *)\n//bds_sec_getLevel(BDS_SEC_ASW_INST_NAME_1_E, ADR(Level_pu8));\n//DiagChkLvlRet_u8 := UDS_Diag_ChkLvl(16#00000004, Level_pu8^);\nDiagChkLvlRet_u8 := 0;\n\nIF (NOT (USINT_TO_BOOL(DiagChkLvlRet_u8))) THEN\n    NvmWriteRet_u16 :=\n        bds_mem_writeBlock(UINT_TO_USINT(bds_mem_nvmBlock01_512_R_D), ADR(GlobalVariables.PrmAsw_gstruc), 0, SIZEOF(GlobalVariables.PrmAsw_gstruc));\n\n    IF (0 = NvmWriteRet_u16) THEN\n        bds_uds_setCallbackStatus(0); (* E_OK *)\n    ELSE\n        bds_uds_setCallbackStatus(10); (* E_NOK which decrements to 1. i.e executes for 10 cycles before E_NOK is set ( wait time ill date is written to NVM) *)\n    END_IF\nELSE\n    bds_uds_setCallbackStatus(10); (* E_NOK *)\nEND_IF\n",
+                  "TextBlobForSerialisation": "(string)(* here check th security level *)\n//bds_sec_getLevel(BDS_SEC_ASW_INST_NAME_1_E, ADR(Level_pu8));\n//DiagChkLvlRet_u8 := UDS_Diag_ChkLvl(16#00000004, Level_pu8^);\nDiagChkLvlRet_u8 := 0;\n\nIF (NOT (USINT_TO_BOOL(DiagChkLvlRet_u8))) THEN\n\tNvmWriteRet_u16 :=\n\t\tbds_mem_writeBlock(UINT_TO_USINT(bds_mem_nvmBlock01_512_R_D), ADR(GlobalVariables.PrmAsw_gstruc), 0, SIZEOF(GlobalVariables.PrmAsw_gstruc));\n\n\tIF (0 = NvmWriteRet_u16) THEN\n\t\tbds_uds_setCallbackStatus(0); (* E_OK *)\n\tELSE\n\t\tbds_uds_setCallbackStatus(10); (* E_NOK which decrements to 1. i.e executes for 10 cycles before E_NOK is set ( wait time ill date is written to NVM) *)\n\tEND_IF\nELSE\n\tbds_uds_setCallbackStatus(10); (* E_NOK *)\nEND_IF\n",
                   "LineInfoPersistence": "(string)65c75283-1ddd-4fd0-9cbc-7cf333e036db_Impl_LineIds"
                 }
               }
@@ -74,13 +74,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)PROGRAM UDS_RoutineCallback\nVAR\n    NvmWriteRet_u16  : UINT;\n    DiagChkLvlRet_u8 : USINT;\n    Level_pu8        : POINTER TO USINT;\nEND_VAR\n",
+                  "TextBlobForSerialisation": "(string)PROGRAM UDS_RoutineCallback\nVAR\n\tNvmWriteRet_u16  : UINT;\n\tDiagChkLvlRet_u8 : USINT;\n\tLevel_pu8        : POINTER TO USINT;\nEND_VAR\n",
                   "LineInfoPersistence": "(string)65c75283-1ddd-4fd0-9cbc-7cf333e036db_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)104",
+          "UniqueIdGenerator": "(string)150",
           "POULevel": {
             "@Type": "8e575c5b:Enum",
             "@Value": "Standard"

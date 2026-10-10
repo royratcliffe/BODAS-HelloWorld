@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(********** Release of PostRun - Move System to Shutdown task   ***************)\n(******************************************************************************)\nCallPostRunNr_no_u16 := CallPostRunNr_no_u16 + 1;\n\n(* Release Postrun after 5 sec *)\nIF (CallPostRunNr_no_u16 > 500) THEN\n    bds_sys_releasePostRunProlong(); (* transitions system state from POSTRUN to SHUTDOWN *)\nEND_IF\n",
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(********** Release of PostRun - Move System to Shutdown task   ***************)\n(******************************************************************************)\nCallPostRunNr_no_u16 := CallPostRunNr_no_u16 + 1;\n\n(* Release Postrun after 5 sec *)\nIF (CallPostRunNr_no_u16 > 500) THEN\n\tbds_sys_releasePostRunProlong(); (* transitions system state from POSTRUN to SHUTDOWN *)\nEND_IF\n",
                   "LineInfoPersistence": "(string)30734eef-31e4-441c-9c89-e440559e2f49_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)52"
+          "UniqueIdGenerator": "(string)79"
         }
       },
       "TypeInfos": {

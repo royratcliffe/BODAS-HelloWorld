@@ -78,7 +78,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\nVAR_GLOBAL CONSTANT\n    BDS_inCmn_postVariants_DU8 : USINT := 1;\nEND_VAR\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\nVAR_GLOBAL CONSTANT\n\tBDS_inCmn_postVariants_DU8 : USINT := 1;\nEND_VAR\n",
                   "LineInfoPersistence": "(string)a8949006-e023-4835-81d4-561e65b9aaf1_Decl_LineIds"
                 }
               }

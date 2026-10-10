@@ -62,7 +62,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)IF (0 = bds_can_getDatabox(bds_can_Chnl_te.BDS_CAN_2_D, 1, ADR(DataboxData_au8), ADR(DataboxNumBytes_u8))) THEN\n    (* Data in array DataboxData_au8 are valid and can be evaluated.*)\n    (* The number of received bytes is stored in variable DataboxNumBytes_au8.*)\n    GlobalVariables.anValue_perc_gu8 := DataboxData_au8[1];\n    GlobalVariables.swtStatus_gu8    := DataboxData_au8[2] AND 16#03;\n    bds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#3, BDS_CAN_STD_DU8, 8, ADR(DataboxData_au8));\nEND_IF\n",
+                  "TextBlobForSerialisation": "(string)IF (0 = bds_can_getDatabox(bds_can_Chnl_te.BDS_CAN_2_D, 1, ADR(DataboxData_au8), ADR(DataboxNumBytes_u8))) THEN\n\t(* Data in array DataboxData_au8 are valid and can be evaluated.*)\n\t(* The number of received bytes is stored in variable DataboxNumBytes_au8.*)\n\tGlobalVariables.anValue_perc_gu8 := DataboxData_au8[1];\n\tGlobalVariables.swtStatus_gu8    := DataboxData_au8[2] AND 16#03;\n\tbds_can_sendData(bds_can_Chnl_te.BDS_CAN_2_D, 16#3, BDS_CAN_STD_DU8, 8, ADR(DataboxData_au8));\nEND_IF\n",
                   "LineInfoPersistence": "(string)1e05096b-536e-449f-a220-16555de5a4b2_Impl_LineIds"
                 }
               }
@@ -74,13 +74,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * Function: FUNC_CAN2RxDatabox1_Cbk\n *\n * Author:  \n *\n * Description:\n * Callback for CAN2\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nFUNCTION FUNC_CAN2RxDatabox1_Cbk\nVAR\n    DataboxData_au8    : ARRAY[1..8] OF USINT;\n    DataboxNumBytes_u8 : USINT;\nEND_VAR\n",
+                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * Function: FUNC_CAN2RxDatabox1_Cbk\n *\n * Author:  \n *\n * Description:\n * Callback for CAN2\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nFUNCTION FUNC_CAN2RxDatabox1_Cbk\nVAR\n\tDataboxData_au8    : ARRAY[1..8] OF USINT;\n\tDataboxNumBytes_u8 : USINT;\nEND_VAR\n",
                   "LineInfoPersistence": "(string)1e05096b-536e-449f-a220-16555de5a4b2_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)97",
+          "UniqueIdGenerator": "(string)155",
           "POULevel": {
             "@Type": "8e575c5b:Enum",
             "@Value": "Standard"

@@ -78,7 +78,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\nVAR_GLOBAL CONSTANT\n    BDS_SYSIO_FI_SHUNT_NUM_SIGNALS_D : UINT := bds_sys_do_signal_te.SHUNT1_EN;\nEND_VAR\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\nVAR_GLOBAL CONSTANT\n\tBDS_SYSIO_FI_SHUNT_NUM_SIGNALS_D : UINT := bds_sys_do_signal_te.SHUNT1_EN;\nEND_VAR\n",
                   "LineInfoPersistence": "(string)52e31d39-d995-46f0-b71a-7a85c422fae9_Decl_LineIds"
                 }
               }

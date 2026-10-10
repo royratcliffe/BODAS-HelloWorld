@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sys_di_signal_te : (\n        SYS_DI_START_SIGNALS := 16#D00,\n        SYS_DI_START         := 16#CFF,\n        ST_INH,\n        SYS_DI_NUM_SIGNALS\n    ) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sys_di_signal_te : (\n\t\tSYS_DI_START_SIGNALS := 16#D00,\n\t\tSYS_DI_START         := 16#CFF,\n\t\tST_INH,\n\t\tSYS_DI_NUM_SIGNALS\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)8ee493b7-c54e-41b5-9f18-b0f7e4b56880_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)29"
+          "UniqueIdGenerator": "(string)38"
         }
       },
       "TypeInfos": {

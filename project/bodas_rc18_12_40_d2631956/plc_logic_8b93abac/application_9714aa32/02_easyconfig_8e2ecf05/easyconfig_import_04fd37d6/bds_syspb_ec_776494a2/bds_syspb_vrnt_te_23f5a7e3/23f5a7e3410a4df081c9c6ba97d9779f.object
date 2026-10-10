@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)///post build system variants information\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sysPb_vrnt_te : (\n        bds_sysPb_vrnt01_E := 0,\n        bds_sysPb_maxNumVrnt_E\n    ) USINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)///post build system variants information\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sysPb_vrnt_te : (\n\t\tbds_sysPb_vrnt01_E := 0,\n\t\tbds_sysPb_maxNumVrnt_E\n\t) USINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)23f5a7e3-410a-4df0-81c9-c6ba97d9779f_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)26"
+          "UniqueIdGenerator": "(string)34"
         }
       },
       "TypeInfos": {
