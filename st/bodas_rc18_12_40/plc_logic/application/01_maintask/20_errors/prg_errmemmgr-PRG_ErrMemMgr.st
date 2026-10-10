@@ -18,16 +18,16 @@
  *********************************************************************************************************************)
 PROGRAM PRG_ErrMemMgr
 VAR
-    ErrMemMgr_s           : struc_ErrMemMgr_prv;
-    DFES_numEntryAvl      : UINT;
-    errList_s             : bds_dsmDTC_getErrList_ts;
-    dsmDTC_getStatus_s    : bds_dsmDTC_getStatus_ts;
-    dfc_as                : ARRAY[0..32] OF bds_dsm_dfc_ts;
-    status_u16            : UINT;
-    cntrDfes_u8           : USINT;
-    cntrApplBuf_u8        : USINT;
-    idxActEntry_u8        : USINT;
-    idxFirstEmptyEntry_u8 : USINT;
+	ErrMemMgr_s           : struc_ErrMemMgr_prv;
+	DFES_numEntryAvl      : UINT;
+	errList_s             : bds_dsmDTC_getErrList_ts;
+	dsmDTC_getStatus_s    : bds_dsmDTC_getStatus_ts;
+	dfc_as                : ARRAY[0..32] OF bds_dsm_dfc_ts;
+	status_u16            : UINT;
+	cntrDfes_u8           : USINT;
+	cntrApplBuf_u8        : USINT;
+	idxActEntry_u8        : USINT;
+	idxFirstEmptyEntry_u8 : USINT;
 END_VAR
 
 (* --- Implementation --- *)
