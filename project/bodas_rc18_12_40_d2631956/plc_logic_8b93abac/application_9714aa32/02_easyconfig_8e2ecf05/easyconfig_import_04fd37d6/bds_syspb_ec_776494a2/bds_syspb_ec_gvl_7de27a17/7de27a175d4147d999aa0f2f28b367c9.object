@@ -78,7 +78,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\nVAR_GLOBAL CONSTANT\n\tml290rts_bs_HelloWorld: USINT := bds_sysPb_vrnt_te.bds_sysPb_vrnt01_E;\nEND_VAR",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\nVAR_GLOBAL CONSTANT\n\tml290rts_bs_HelloWorld : USINT := bds_sysPb_vrnt_te.bds_sysPb_vrnt01_E;\nEND_VAR\n",
                   "LineInfoPersistence": "(string)7de27a17-5d41-47d9-99aa-0f2f28b367c9_Decl_LineIds"
                 }
               }

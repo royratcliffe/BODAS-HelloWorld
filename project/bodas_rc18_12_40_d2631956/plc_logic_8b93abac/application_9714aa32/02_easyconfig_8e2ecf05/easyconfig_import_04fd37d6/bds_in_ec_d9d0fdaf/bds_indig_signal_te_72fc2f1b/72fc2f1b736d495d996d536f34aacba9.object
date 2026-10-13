@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)///BODAS configuration of available digital input signals\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_inDig_signal_te :\n(\n\tbds_inDig_K22_E := 0,\n\t///End V1\n\tbds_inDig_K21_E,\n\tbds_inDig_numSignal_E\n) USINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)///BODAS configuration of available digital input signals\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_inDig_signal_te : (\n\t\tbds_inDig_K22_E := 0,\n\t\t///End V1\n\t\tbds_inDig_K21_E,\n\t\tbds_inDig_numSignal_E\n\t) USINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)72fc2f1b-736d-495d-996d-536f34aacba9_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)12"
+          "UniqueIdGenerator": "(string)42"
         }
       },
       "TypeInfos": {

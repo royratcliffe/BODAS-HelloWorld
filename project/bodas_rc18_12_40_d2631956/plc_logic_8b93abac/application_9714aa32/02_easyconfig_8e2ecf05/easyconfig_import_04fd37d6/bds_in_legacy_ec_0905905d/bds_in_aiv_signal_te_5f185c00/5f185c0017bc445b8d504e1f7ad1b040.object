@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_in_aiv_signal_te :\n(\n\tIN_AIV_START_SIGNALS := 16#500,\n\tIN_AIV_START := 16#4FF,\n\tK52,\n\tK60,\n\tK43,\n\tK54,\n\tK55,\n\tK39,\n\tK38,\n\tK40,\n\tK42,\n\tK37,\n\tK61,\n\tK45,\n\tK44,\n\tA21,\n\tA36,\n\tA37,\n\tA38,\n\tA39,\n\tK30,\n\tA43,\n\tA22,\n\tA23,\n\tA24,\n\tK78,\n\tK76,\n\tK74,\n\tK77,\n\tK10,\n\tK75,\n\tK31,\n\tK34,\n\tA13,\n\tA40,\n\tA41,\n\tA42,\n\tA25,\n\tA26,\n\tA27,\n\tA14,\n\tA57,\n\tA28,\n\tA29,\n\tK11,\n\tK35,\n\tIN_AIV_NUM_SIGNALS,\n\tIN_AIV_FLEXIN_NUM_SIGNALS := K78\n) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_in_aiv_signal_te : (\n\t\tIN_AIV_START_SIGNALS := 16#500,\n\t\tIN_AIV_START         := 16#4FF,\n\t\tK52,\n\t\tK60,\n\t\tK43,\n\t\tK54,\n\t\tK55,\n\t\tK39,\n\t\tK38,\n\t\tK40,\n\t\tK42,\n\t\tK37,\n\t\tK61,\n\t\tK45,\n\t\tK44,\n\t\tA21,\n\t\tA36,\n\t\tA37,\n\t\tA38,\n\t\tA39,\n\t\tK30,\n\t\tA43,\n\t\tA22,\n\t\tA23,\n\t\tA24,\n\t\tK78,\n\t\tK76,\n\t\tK74,\n\t\tK77,\n\t\tK10,\n\t\tK75,\n\t\tK31,\n\t\tK34,\n\t\tA13,\n\t\tA40,\n\t\tA41,\n\t\tA42,\n\t\tA25,\n\t\tA26,\n\t\tA27,\n\t\tA14,\n\t\tA57,\n\t\tA28,\n\t\tA29,\n\t\tK11,\n\t\tK35,\n\t\tIN_AIV_NUM_SIGNALS,\n\t\tIN_AIV_FLEXIN_NUM_SIGNALS := K78\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)5f185c00-17bc-445b-8d50-4e1f7ad1b040_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)55"
+          "UniqueIdGenerator": "(string)214"
         }
       },
       "TypeInfos": {

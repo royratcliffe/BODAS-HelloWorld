@@ -62,7 +62,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)IF( DbgMgr_struc.prm_struc.flgXcpOn_b) THEN\n  (* enable XCP *)\n  bds_xcp_setMode(BDS_ENABLE_XCP_DU16);\n\nELSE\n  (* disable XCP *)\n  bds_xcp_setMode(BDS_DISABLE_XCP_DU16);\n\nEND_IF\n\n(* Recognise a rising edge *)\nDbgMgr_struc.outp_struc.flgStoreDataToNvmReq_l := FUNC_DbgMgrRisingEdgeDetn(i_curr_b:= DbgMgr_struc.prm_struc.flgStoreDataToNvm_b, i_prev_pb:= ADR(DbgMgr_struc.prv_struc.flgStoreDataToNvmPrev_l) );\n\n(* Save parameters in Nvm if requested via XCP *)\nIF( DbgMgr_struc.outp_struc.flgStoreDataToNvmReq_l ) THEN\n\t(* PrmMgr_SaveNvmAll(); todo *)\n\t\n\t(* Get lock so parameters are not modified during copy to Nvm RAM (e.g. UDS/XCP) *)\n\tBDS_SYS_GET_LOCK_COMMON();\n\t\n\t(* copy ram mirror of block 1 into NVM todo report stsSaveFct_u16 *)\n\tbds_mem_writeBlock(UINT_TO_USINT(bds_mem_nvmBlock02_512_R_D), ADR(DbgMgr_struc), 0, SIZEOF(DbgMgr_struc));\n\t\n\t(* Release lock *)\n\tBDS_SYS_RELEASE_LOCK_COMMON();\n\nEND_IF",
+                  "TextBlobForSerialisation": "(string)IF (DbgMgr_struc.prm_struc.flgXcpOn_b) THEN\n\t(* enable XCP *)\n\tbds_xcp_setMode(BDS_ENABLE_XCP_DU16);\nELSE\n\t(* disable XCP *)\n\tbds_xcp_setMode(BDS_DISABLE_XCP_DU16);\nEND_IF\n\n(* Recognise a rising edge *)\nDbgMgr_struc.outp_struc.flgStoreDataToNvmReq_l := FUNC_DbgMgrRisingEdgeDetn(i_curr_b  := DbgMgr_struc.prm_struc.flgStoreDataToNvm_b,\n\t                                                                        i_prev_pb := ADR(DbgMgr_struc.prv_struc.flgStoreDataToNvmPrev_l));\n\n(* Save parameters in Nvm if requested via XCP *)\nIF (DbgMgr_struc.outp_struc.flgStoreDataToNvmReq_l) THEN\n\t(* PrmMgr_SaveNvmAll(); todo *)\n\t(* Get lock so parameters are not modified during copy to Nvm RAM (e.g. UDS/XCP) *)\n\tBDS_SYS_GET_LOCK_COMMON();\n\t(* copy ram mirror of block 1 into NVM todo report stsSaveFct_u16 *)\n\tbds_mem_writeBlock(UINT_TO_USINT(bds_mem_nvmBlock02_512_R_D), ADR(DbgMgr_struc), 0, SIZEOF(DbgMgr_struc));\n\t(* Release lock *)\n\tBDS_SYS_RELEASE_LOCK_COMMON();\nEND_IF\n",
                   "LineInfoPersistence": "(string)f3add7b4-12cb-44d0-bd9b-883922d29e4a_Impl_LineIds"
                 }
               }
@@ -74,13 +74,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * Program: PRG_DebugManager\n *\n * Author:  \n *\n * Description:\n * Interface for Debug Manager\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nPROGRAM PRG_DebugManager\nVAR\n\tDbgMgr_struc : struc_DbgMgr; \nEND_VAR\n",
+                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * Program: PRG_DebugManager\n *\n * Author:  \n *\n * Description:\n * Interface for Debug Manager\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nPROGRAM PRG_DebugManager\nVAR\n\tDbgMgr_struc : struc_DbgMgr;\nEND_VAR\n",
                   "LineInfoPersistence": "(string)f3add7b4-12cb-44d0-bd9b-883922d29e4a_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)52",
+          "UniqueIdGenerator": "(string)224",
           "POULevel": {
             "@Type": "8e575c5b:Enum",
             "@Value": "Standard"

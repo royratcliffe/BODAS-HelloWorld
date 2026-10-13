@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sys_aiv_signal_te :\n(\n\tSYS_AIV_START_SIGNALS := 16#A00,\n\tSYS_AIV_START := 16#9FF,\n\tUBAT_MON,\n\tUBRM24_MON,\n\tVDD5A_MON,\n\tUBR24_VP,\n\tUBRM24_LOADS,\n\tVDD3V3,\n\tVPR6,\n\tVDD5V_IN,\n\tVDD5_S3530,\n\tVSS3V5,\n\tVSS4V10,\n\tLSS_MEAS_CL13,\n\tLSS_MEAS_CL2,\n\tSYS_AIV_NUM_SIGNALS\n) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sys_aiv_signal_te : (\n\t\tSYS_AIV_START_SIGNALS := 16#A00,\n\t\tSYS_AIV_START         := 16#9FF,\n\t\tUBAT_MON,\n\t\tUBRM24_MON,\n\t\tVDD5A_MON,\n\t\tUBR24_VP,\n\t\tUBRM24_LOADS,\n\t\tVDD3V3,\n\t\tVPR6,\n\t\tVDD5V_IN,\n\t\tVDD5_S3530,\n\t\tVSS3V5,\n\t\tVSS4V10,\n\t\tLSS_MEAS_CL13,\n\t\tLSS_MEAS_CL2,\n\t\tSYS_AIV_NUM_SIGNALS\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)357239a9-8cf4-4777-99f8-1295cc179d42_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)23"
+          "UniqueIdGenerator": "(string)86"
         }
       },
       "TypeInfos": {

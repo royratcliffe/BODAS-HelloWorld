@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)chkResult_e := bds_dsmCmn_fltLvl_0_Perc_e;",
+                  "TextBlobForSerialisation": "(string)chkResult_e := bds_dsmCmn_fltLvl_0_Perc_e;\n",
                   "LineInfoPersistence": "(string)dd5a388a-6e53-4896-8543-1411150afeab_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)1"
+          "UniqueIdGenerator": "(string)5"
         }
       },
       "TypeInfos": {

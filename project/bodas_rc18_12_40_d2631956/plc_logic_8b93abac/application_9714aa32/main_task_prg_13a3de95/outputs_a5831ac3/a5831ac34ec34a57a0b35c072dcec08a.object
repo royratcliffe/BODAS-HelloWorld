@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(************************ OUTPUTS  ********************************************)\n(******************************************************************************)\n\nPRG_Outputs( \n\ti_UPumpSensr_mV_u16 := PRG_Inputs.uPmpSnsr_mV_u16\n);",
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(************************ OUTPUTS  ********************************************)\n(******************************************************************************)\nPRG_Outputs(i_UPumpSensr_mV_u16 := PRG_Inputs.uPmpSnsr_mV_u16);\n",
                   "LineInfoPersistence": "(string)a5831ac3-4ec3-4a57-a0b3-5c072dcec08a_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)7"
+          "UniqueIdGenerator": "(string)27"
         }
       },
       "TypeInfos": {

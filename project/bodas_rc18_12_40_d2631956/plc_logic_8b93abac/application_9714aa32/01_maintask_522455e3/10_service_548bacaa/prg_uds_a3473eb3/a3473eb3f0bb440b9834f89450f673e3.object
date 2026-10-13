@@ -62,7 +62,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string);",
+                  "TextBlobForSerialisation": "(string);\n",
                   "LineInfoPersistence": "(string)a3473eb3-f0bb-440b-9834-f89450f673e3_Impl_LineIds"
                 }
               }
@@ -80,7 +80,7 @@
               }
             }
           },
-          "UniqueIdGenerator": "(string)23",
+          "UniqueIdGenerator": "(string)99",
           "POULevel": {
             "@Type": "8e575c5b:Enum",
             "@Value": "Standard"

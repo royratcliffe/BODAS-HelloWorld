@@ -57,13 +57,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)TYPE struc_ErrMemMgr_savePrm :\nSTRUCT\n  ErrMemMgr_prevActvDfes_as : ARRAY[0..ErrMemMgr_nrDfesEntries_DU8 - 1] OF struc_ErrMemMgr_prevActvDfes; (* Previously active DFES list *)\nEND_STRUCT\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)TYPE struc_ErrMemMgr_savePrm : STRUCT\n\t\tErrMemMgr_prevActvDfes_as : ARRAY[0..ErrMemMgr_nrDfesEntries_DU8 - 1] OF struc_ErrMemMgr_prevActvDfes; (* Previously active DFES list *)\n\tEND_STRUCT\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)55e6d170-0ea6-4a13-8f4d-28e82b2c1102_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)8"
+          "UniqueIdGenerator": "(string)20"
         }
       },
       "TypeInfos": {

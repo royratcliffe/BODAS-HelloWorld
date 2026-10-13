@@ -149,9 +149,9 @@
           "PlaceholderRedirectionTable": {
             "@Type": "Hashtable:IDictionary",
             "@Value": {
-              "CBML": "(string)Common Behaviour Model, 3.5.17.0 (3S - Smart Software Solutions GmbH)",
-              "Standard": "(string)Standard, 3.5.18.0 (System)",
-              "Util": "(string)Util, 3.5.19.0 (System)"
+              "CBML": "(string)Common Behaviour Model, 5.0.0.0 (CODESYS)",
+              "Standard": "(string)Standard, 3.5.22.0 (System)",
+              "Util": "(string)Util, 3.5.22.0 (System)"
             }
           }
         }

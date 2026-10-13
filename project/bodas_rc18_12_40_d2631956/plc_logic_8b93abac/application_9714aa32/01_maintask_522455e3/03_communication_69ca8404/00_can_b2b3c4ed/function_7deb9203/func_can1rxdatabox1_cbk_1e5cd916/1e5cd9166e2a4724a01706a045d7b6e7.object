@@ -62,7 +62,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)GlobalVariables.can1RxDataboxCbkCntr_gu32 := GlobalVariables.can1RxDataboxCbkCntr_gu32 + 1;",
+                  "TextBlobForSerialisation": "(string)GlobalVariables.can1RxDataboxCbkCntr_gu32 := GlobalVariables.can1RxDataboxCbkCntr_gu32 + 1;\n",
                   "LineInfoPersistence": "(string)1e5cd916-6e2a-4724-a017-06a045d7b6e7_Impl_LineIds"
                 }
               }
@@ -74,13 +74,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * FUNC: FUNC_CAN1RxDatabox1_Cbk\n *\n * Author:  \n *\n * Description:\n * Callback for CAN1\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nFUNCTION FUNC_CAN1RxDatabox1_Cbk\nVAR\n\nEND_VAR\n",
+                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * FUNC: FUNC_CAN1RxDatabox1_Cbk\n *\n * Author:  \n *\n * Description:\n * Callback for CAN1\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nFUNCTION FUNC_CAN1RxDatabox1_Cbk\nVAR\nEND_VAR\n",
                   "LineInfoPersistence": "(string)1e5cd916-6e2a-4724-a017-06a045d7b6e7_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)23",
+          "UniqueIdGenerator": "(string)107",
           "POULevel": {
             "@Type": "8e575c5b:Enum",
             "@Value": "Standard"

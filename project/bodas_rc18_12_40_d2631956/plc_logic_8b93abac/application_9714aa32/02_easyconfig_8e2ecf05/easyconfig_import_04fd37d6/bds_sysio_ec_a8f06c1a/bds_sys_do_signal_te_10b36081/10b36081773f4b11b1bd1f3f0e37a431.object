@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sys_do_signal_te :\n(\n\tSYS_DO_START_SIGNALS := 16#B00,\n\tSYS_DO_START := 16#AFF,\n\tSHUNT_AIC_K39_EN,\n\tSHUNT_AIC_K38_EN,\n\tSHUNT_AIC_K40_EN,\n\tSHUNT_AIC_K41_EN,\n\tSHUNT_AIC_K42_EN,\n\tSHUNT_AIC_K45_EN,\n\tSHUNT_AIC_K44_EN,\n\tSHUNT_AIC_K65_EN,\n\tSHUNT_AIC_K63_EN,\n\tSHUNT_AIC_K64_EN,\n\tSHUNT_AIC_A36_EN,\n\tSHUNT_AIC_A37_EN,\n\tSHUNT_AIC_A38_EN,\n\tSHUNT_AIC_A39_EN,\n\tSHUNT1_EN,\n\tSHUNT3_EN,\n\tSHUNT5_EN,\n\tSHUNT6_EN,\n\tSYS_DO_NUM_SIGNALS\n) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sys_do_signal_te : (\n\t\tSYS_DO_START_SIGNALS := 16#B00,\n\t\tSYS_DO_START         := 16#AFF,\n\t\tSHUNT_AIC_K39_EN,\n\t\tSHUNT_AIC_K38_EN,\n\t\tSHUNT_AIC_K40_EN,\n\t\tSHUNT_AIC_K41_EN,\n\t\tSHUNT_AIC_K42_EN,\n\t\tSHUNT_AIC_K45_EN,\n\t\tSHUNT_AIC_K44_EN,\n\t\tSHUNT_AIC_K65_EN,\n\t\tSHUNT_AIC_K63_EN,\n\t\tSHUNT_AIC_K64_EN,\n\t\tSHUNT_AIC_A36_EN,\n\t\tSHUNT_AIC_A37_EN,\n\t\tSHUNT_AIC_A38_EN,\n\t\tSHUNT_AIC_A39_EN,\n\t\tSHUNT1_EN,\n\t\tSHUNT3_EN,\n\t\tSHUNT5_EN,\n\t\tSHUNT6_EN,\n\t\tSYS_DO_NUM_SIGNALS\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)10b36081-773f-4b11-b1bd-1f3f0e37a431_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)28"
+          "UniqueIdGenerator": "(string)106"
         }
       },
       "TypeInfos": {

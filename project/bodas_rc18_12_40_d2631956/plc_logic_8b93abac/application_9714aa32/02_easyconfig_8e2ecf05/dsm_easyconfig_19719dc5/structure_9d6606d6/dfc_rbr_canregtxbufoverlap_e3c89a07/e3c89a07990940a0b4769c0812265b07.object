@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_DFC_rbr_canRegTxBufOverlap'}\nTYPE DFC_rbr_canRegTxBufOverlap :\nSTRUCT\n\tDTC: UDINT := 16#021B00;\n\tDFCid: UINT := 850;\n\tdebounceMethod: USINT := NO_DEBOUNCE;\nEND_STRUCT\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_DFC_rbr_canRegTxBufOverlap'}\nTYPE DFC_rbr_canRegTxBufOverlap : STRUCT\n\t\tDTC            : UDINT := 16#021B00;\n\t\tDFCid          : UINT  := 850;\n\t\tdebounceMethod : USINT := NO_DEBOUNCE;\n\tEND_STRUCT\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)e3c89a07-9909-40a0-b476-9c0812265b07_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)9"
+          "UniqueIdGenerator": "(string)30"
         }
       },
       "TypeInfos": {

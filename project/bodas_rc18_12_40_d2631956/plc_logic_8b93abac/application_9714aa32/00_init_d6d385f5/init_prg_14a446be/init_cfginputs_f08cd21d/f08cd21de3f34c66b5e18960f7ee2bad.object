@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** Initialization: Input  **********************************)\n(******************************************************************************)\n\nPRG_Inputs.ACT_InitInputs();",
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** Initialization: Input  **********************************)\n(******************************************************************************)\nPRG_Inputs.ACT_InitInputs();\n",
                   "LineInfoPersistence": "(string)f08cd21d-e3f3-4c66-b5e1-8960f7ee2bad_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)7"
+          "UniqueIdGenerator": "(string)19"
         }
       },
       "TypeInfos": {

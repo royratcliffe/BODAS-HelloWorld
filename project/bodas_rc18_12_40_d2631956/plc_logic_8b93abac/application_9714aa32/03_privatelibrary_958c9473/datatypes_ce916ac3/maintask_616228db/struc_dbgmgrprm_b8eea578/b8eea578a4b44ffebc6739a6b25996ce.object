@@ -57,13 +57,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)TYPE struc_DbgMgrPrm :\nSTRUCT\n\tflgXcpOn_b          : BOOL;\n\tflgStoreDataToNvm_b : BOOL;\n\nEND_STRUCT\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)TYPE struc_DbgMgrPrm : STRUCT\n\t\tflgXcpOn_b          : BOOL;\n\t\tflgStoreDataToNvm_b : BOOL;\n\tEND_STRUCT\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)b8eea578-a4b4-4ffe-bc67-39a6b25996ce_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)42"
+          "UniqueIdGenerator": "(string)57"
         }
       },
       "TypeInfos": {

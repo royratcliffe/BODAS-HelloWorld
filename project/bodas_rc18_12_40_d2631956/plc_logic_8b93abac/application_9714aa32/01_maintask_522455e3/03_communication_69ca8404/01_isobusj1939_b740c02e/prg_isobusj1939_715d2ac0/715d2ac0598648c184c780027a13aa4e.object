@@ -62,7 +62,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string);",
+                  "TextBlobForSerialisation": "(string);\n",
                   "LineInfoPersistence": "(string)715d2ac0-5986-48c1-84c7-80027a13aa4e_Impl_LineIds"
                 }
               }
@@ -74,13 +74,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * Program: PRG_ISOBUSJ1939\n *\n * Author:  \n *\n * Description:\n * Interface for ISOBUS\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nPROGRAM PRG_ISOBUSJ1939\nVAR\n\tdataJ1939Inst_as : ARRAY[1..enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInstMax_E] OF bds_isobus_appInst_ts;\n\t\n\tdataTxBufDataBoxes1_as : ARRAY[1..enu_IsobusJ1939_TxInst1Box.IsobusJ1939_TxInst1BoxMax_E] OF bds_isobus_txMsg_ts;\n\tdataRxBufDataBoxes1_as : ARRAY[1..enu_IsobusJ1939_RxInst1Box.IsobusJ1939_RxInst1BoxMax_E] OF bds_isobus_rxMsg_ts;\n\t\n\tdataTxBufDataBoxes2_as : ARRAY[1..enu_IsobusJ1939_TxInst2Box.IsobusJ1939_TxInst2BoxMax_E] OF bds_isobus_txMsg_ts;\n\tdataRxBufDataBoxes2_as : ARRAY[1..enu_IsobusJ1939_RxInst2Box.IsobusJ1939_RxInst2BoxMax_E] OF bds_isobus_rxMsg_ts;\n\t\n\tdataTxBufDataBoxes3_as : ARRAY[1..enu_IsobusJ1939_TxInst3Box.IsobusJ1939_TxInst3BoxMax_E] OF bds_isobus_txMsg_ts;\n\tdataRxBufDataBoxes3_as : ARRAY[1..enu_IsobusJ1939_RxInst3Box.IsobusJ1939_RxInst3BoxMax_E] OF bds_isobus_rxMsg_ts;\n\t\n\tdataJ1939Dm1Failrs_as : ARRAY[1..86] OF bds_isobus_dtcList_ts ; (* failure list struct-array *)\nEND_VAR\n",
+                  "TextBlobForSerialisation": "(string)(*********************************************************************************************************************\n *     __   __   ___  ___           __   __        __   __  ___\n *   /_ / /  / /__  /    /__/     /_ / /_   |_ / /_ / /  /  /  /__/\n *  /__/ /__/ __ / /__  /  /     /  | /__  /  | /  | /__/  /  /  /\n *\n * Project: Hello World for ml290.rts\n *\n * Program: PRG_ISOBUSJ1939\n *\n * Author:  \n *\n * Description:\n * Interface for ISOBUS\n *\n * (c) Copyright by BOSCH REXROTH AG, all rights reserved\n *\n *********************************************************************************************************************)\nPROGRAM PRG_ISOBUSJ1939\nVAR\n\tdataJ1939Inst_as       : ARRAY[1..enu_IsobusJ1939_IsobusInst.IsobusJ1939_IsobusInstMax_E] OF bds_isobus_appInst_ts;\n\tdataTxBufDataBoxes1_as : ARRAY[1..enu_IsobusJ1939_TxInst1Box.IsobusJ1939_TxInst1BoxMax_E] OF bds_isobus_txMsg_ts;\n\tdataRxBufDataBoxes1_as : ARRAY[1..enu_IsobusJ1939_RxInst1Box.IsobusJ1939_RxInst1BoxMax_E] OF bds_isobus_rxMsg_ts;\n\tdataTxBufDataBoxes2_as : ARRAY[1..enu_IsobusJ1939_TxInst2Box.IsobusJ1939_TxInst2BoxMax_E] OF bds_isobus_txMsg_ts;\n\tdataRxBufDataBoxes2_as : ARRAY[1..enu_IsobusJ1939_RxInst2Box.IsobusJ1939_RxInst2BoxMax_E] OF bds_isobus_rxMsg_ts;\n\tdataTxBufDataBoxes3_as : ARRAY[1..enu_IsobusJ1939_TxInst3Box.IsobusJ1939_TxInst3BoxMax_E] OF bds_isobus_txMsg_ts;\n\tdataRxBufDataBoxes3_as : ARRAY[1..enu_IsobusJ1939_RxInst3Box.IsobusJ1939_RxInst3BoxMax_E] OF bds_isobus_rxMsg_ts;\n\tdataJ1939Dm1Failrs_as  : ARRAY[1..86] OF bds_isobus_dtcList_ts; (* failure list struct-array *)\nEND_VAR\n",
                   "LineInfoPersistence": "(string)715d2ac0-5986-48c1-84c7-80027a13aa4e_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)36",
+          "UniqueIdGenerator": "(string)152",
           "POULevel": {
             "@Type": "8e575c5b:Enum",
             "@Value": "Standard"

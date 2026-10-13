@@ -57,13 +57,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only'}\n{attribute 'strict'}\nTYPE enu_IsobusJ1939_TxInst3Box :\n(\n  IsobusJ1939_TxInst3BoxDm1_E := 3,\n  IsobusJ1939_TxInst3BoxMax_E   (* last enum for automatic array resizing *)\n);\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only'}\n{attribute 'strict'}\nTYPE enu_IsobusJ1939_TxInst3Box : (\n\t\tIsobusJ1939_TxInst3BoxDm1_E := 3,\n\t\tIsobusJ1939_TxInst3BoxMax_E (* last enum for automatic array resizing *)\n\t);\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)795f6d96-bfc8-44cf-b58a-78ac384a28cf_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)31"
+          "UniqueIdGenerator": "(string)52"
         }
       },
       "TypeInfos": {

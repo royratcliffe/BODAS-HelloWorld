@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_DFC_rbr_outAovGetVoltage'}\nTYPE DFC_rbr_outAovGetVoltage :\nSTRUCT\n\tDTC: UDINT := 16#048200;\n\tDFCid: UINT := 1023;\n\tdebounceMethod: USINT := NO_DEBOUNCE;\nEND_STRUCT\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_DFC_rbr_outAovGetVoltage'}\nTYPE DFC_rbr_outAovGetVoltage : STRUCT\n\t\tDTC            : UDINT := 16#048200;\n\t\tDFCid          : UINT  := 1023;\n\t\tdebounceMethod : USINT := NO_DEBOUNCE;\n\tEND_STRUCT\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)53803c93-26ab-4174-9e6a-3a69b17412f5_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)9"
+          "UniqueIdGenerator": "(string)30"
         }
       },
       "TypeInfos": {

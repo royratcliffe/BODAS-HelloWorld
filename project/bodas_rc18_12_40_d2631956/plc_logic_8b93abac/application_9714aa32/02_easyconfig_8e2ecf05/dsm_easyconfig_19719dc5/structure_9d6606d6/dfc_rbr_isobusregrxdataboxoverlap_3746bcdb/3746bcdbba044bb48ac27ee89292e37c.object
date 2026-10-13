@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_DFC_rbr_isobusRegRxDataboxOverlap'}\nTYPE DFC_rbr_isobusRegRxDataboxOverlap :\nSTRUCT\n\tDTC: UDINT := 16#051100;\n\tDFCid: UINT := 928;\n\tdebounceMethod: USINT := NO_DEBOUNCE;\nEND_STRUCT\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_DFC_rbr_isobusRegRxDataboxOverlap'}\nTYPE DFC_rbr_isobusRegRxDataboxOverlap : STRUCT\n\t\tDTC            : UDINT := 16#051100;\n\t\tDFCid          : UINT  := 928;\n\t\tdebounceMethod : USINT := NO_DEBOUNCE;\n\tEND_STRUCT\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)3746bcdb-ba04-4bb4-8ac2-7ee89292e37c_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)9"
+          "UniqueIdGenerator": "(string)30"
         }
       },
       "TypeInfos": {

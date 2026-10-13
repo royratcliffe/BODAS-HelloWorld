@@ -57,13 +57,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only'}\n{attribute 'strict'}\nTYPE enu_ListCtrlVlv :\n(\n  st_fctOff_cenu    := 0, (* Default value *)\n  st_fctOnPos_cenu      ,\n  st_fctOnNeg_cenu\n);\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only'}\n{attribute 'strict'}\nTYPE enu_ListCtrlVlv : (\n\t\tst_fctOff_cenu := 0, (* Default value *)\n\t\tst_fctOnPos_cenu,\n\t\tst_fctOnNeg_cenu\n\t);\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)6bfe1bf0-0a80-4387-aabe-556c16752e03_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)10"
+          "UniqueIdGenerator": "(string)34"
         }
       },
       "TypeInfos": {

@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(************************ INPUTS  *********************************************)\n(******************************************************************************)\n\nPRG_Inputs(\n \ti_TaskCycleTime_ms_u16 := TaskCycleTime_ms_u16,\n \to_T15_st_u8            => \n );\n \n(******************************************************************************)\n(************************ CAN INPUT  ******************************************)\n(******************************************************************************)\n\nPRG_CANIn();\n\n(* read current and previous states of system. *)\nbds_sys_getStates( ADR( states_s ) );\n \n(* if the system is in POSTRUN state currently *)\nIF ( NOT( USINT_TO_BOOL(  PRG_Inputs.o_T15_st_u8 ) ) OR states_s.currentState_e = BDS_SYSSTATE_POSTRUN_E ) THEN\n\tPostRun_st_b := TRUE;\n\t\nELSE\n\tPostRun_st_b := FALSE;\n\t\nEND_IF\n\n\n ",
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(************************ INPUTS  *********************************************)\n(******************************************************************************)\nPRG_Inputs(i_TaskCycleTime_ms_u16 := TaskCycleTime_ms_u16, o_T15_st_u8 =>);\n(******************************************************************************)\n(************************ CAN INPUT  ******************************************)\n(******************************************************************************)\nPRG_CANIn();\n(* read current and previous states of system. *)\nbds_sys_getStates(ADR(states_s));\n\n(* if the system is in POSTRUN state currently *)\nIF (NOT (USINT_TO_BOOL(PRG_Inputs.o_T15_st_u8)) OR states_s.currentState_e = BDS_SYSSTATE_POSTRUN_E) THEN\n\tPostRun_st_b := TRUE;\nELSE\n\tPostRun_st_b := FALSE;\nEND_IF\n",
                   "LineInfoPersistence": "(string)25107004-0999-402d-a306-d0b3cd366650_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)37"
+          "UniqueIdGenerator": "(string)122"
         }
       },
       "TypeInfos": {

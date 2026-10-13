@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)///Definition of  input Configured Signals for Voltage( Consists signals of all variants)\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_inU_signal_te :\n(\n\tbds_inU_K52_E := 0,\n\tbds_inU_K60_E,\n\tbds_inU_K43_E,\n\tbds_inU_K54_E,\n\tbds_inU_K55_E,\n\tbds_inU_K39_E,\n\tbds_inU_K38_E,\n\tbds_inU_K40_E,\n\tbds_inU_K42_E,\n\tbds_inU_K37_E,\n\tbds_inU_K61_E,\n\tbds_inU_K45_E,\n\tbds_inU_K44_E,\n\tbds_inU_A21_E,\n\tbds_inU_A36_E,\n\tbds_inU_A37_E,\n\tbds_inU_A38_E,\n\tbds_inU_A39_E,\n\tbds_inU_K30_E,\n\tbds_inU_A43_E,\n\tbds_inU_A22_E,\n\tbds_inU_A23_E,\n\tbds_inU_A24_E,\n\tbds_inU_K78_E,\n\tbds_inU_K76_E,\n\tbds_inU_K74_E,\n\tbds_inU_K77_E,\n\tbds_inU_K10_E,\n\tbds_inU_K75_E,\n\tbds_inU_K31_E,\n\tbds_inU_K34_E,\n\tbds_inU_A13_E,\n\tbds_inU_A40_E,\n\tbds_inU_A41_E,\n\tbds_inU_A42_E,\n\tbds_inU_A25_E,\n\tbds_inU_A26_E,\n\tbds_inU_A27_E,\n\tbds_inU_A14_E,\n\tbds_inU_A57_E,\n\tbds_inU_A28_E,\n\tbds_inU_A29_E,\n\tbds_inU_K11_E,\n\tbds_inU_K35_E,\n\tbds_inU_A59_E,\n\tbds_inU_numSignal_E\n) USINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)///Definition of  input Configured Signals for Voltage( Consists signals of all variants)\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_inU_signal_te : (\n\t\tbds_inU_K52_E := 0,\n\t\tbds_inU_K60_E,\n\t\tbds_inU_K43_E,\n\t\tbds_inU_K54_E,\n\t\tbds_inU_K55_E,\n\t\tbds_inU_K39_E,\n\t\tbds_inU_K38_E,\n\t\tbds_inU_K40_E,\n\t\tbds_inU_K42_E,\n\t\tbds_inU_K37_E,\n\t\tbds_inU_K61_E,\n\t\tbds_inU_K45_E,\n\t\tbds_inU_K44_E,\n\t\tbds_inU_A21_E,\n\t\tbds_inU_A36_E,\n\t\tbds_inU_A37_E,\n\t\tbds_inU_A38_E,\n\t\tbds_inU_A39_E,\n\t\tbds_inU_K30_E,\n\t\tbds_inU_A43_E,\n\t\tbds_inU_A22_E,\n\t\tbds_inU_A23_E,\n\t\tbds_inU_A24_E,\n\t\tbds_inU_K78_E,\n\t\tbds_inU_K76_E,\n\t\tbds_inU_K74_E,\n\t\tbds_inU_K77_E,\n\t\tbds_inU_K10_E,\n\t\tbds_inU_K75_E,\n\t\tbds_inU_K31_E,\n\t\tbds_inU_K34_E,\n\t\tbds_inU_A13_E,\n\t\tbds_inU_A40_E,\n\t\tbds_inU_A41_E,\n\t\tbds_inU_A42_E,\n\t\tbds_inU_A25_E,\n\t\tbds_inU_A26_E,\n\t\tbds_inU_A27_E,\n\t\tbds_inU_A14_E,\n\t\tbds_inU_A57_E,\n\t\tbds_inU_A28_E,\n\t\tbds_inU_A29_E,\n\t\tbds_inU_K11_E,\n\t\tbds_inU_K35_E,\n\t\tbds_inU_A59_E,\n\t\tbds_inU_numSignal_E\n\t) USINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)21869b54-baa0-4247-b1c1-edecb4eb8766_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)54"
+          "UniqueIdGenerator": "(string)210"
         }
       },
       "TypeInfos": {

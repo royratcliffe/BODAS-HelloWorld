@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)///Definition of input signals for PWM\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_inPwm_signal_te :\n(\n\tbds_inPwm_K54_E := 0,\n\tbds_inPwm_K37_E,\n\tbds_inPwm_K30_E,\n\tbds_inPwm_A43_E,\n\tbds_inPwm_A59_A44_E,\n\tbds_inPwm_numSignal_E\n) USINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)///Definition of input signals for PWM\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_inPwm_signal_te : (\n\t\tbds_inPwm_K54_E := 0,\n\t\tbds_inPwm_K37_E,\n\t\tbds_inPwm_K30_E,\n\t\tbds_inPwm_A43_E,\n\t\tbds_inPwm_A59_A44_E,\n\t\tbds_inPwm_numSignal_E\n\t) USINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)d0f3738f-847c-4144-9893-644263c4e85d_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)14"
+          "UniqueIdGenerator": "(string)50"
         }
       },
       "TypeInfos": {

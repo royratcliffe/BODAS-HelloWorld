@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)///Definition configuration of available SENT signals (consists signals of all variants)\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sent_signal_te :\n(\n\t///X_X_X03\n\tbds_sent_K53_E := 0,\n\t///X_X_X04\n\tbds_sent_K59_E,\n\t///X_X_X16\n\tbds_sent_K57_E,\n\t///X_X_X17\n\tbds_sent_K58_E,\n\t///X_X_X18\n\tbds_sent_K36_E,\n\t///X_X_X19\n\tbds_sent_K56_E,\n\tbds_sent_numSignal_E\n) USINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)///Definition configuration of available SENT signals (consists signals of all variants)\n{attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_sent_signal_te : (\n\t\t///X_X_X03\n\t\tbds_sent_K53_E := 0,\n\t\t///X_X_X04\n\t\tbds_sent_K59_E,\n\t\t///X_X_X16\n\t\tbds_sent_K57_E,\n\t\t///X_X_X17\n\t\tbds_sent_K58_E,\n\t\t///X_X_X18\n\t\tbds_sent_K36_E,\n\t\t///X_X_X19\n\t\tbds_sent_K56_E,\n\t\tbds_sent_numSignal_E\n\t) USINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)b86c2583-67ed-441f-bb40-818115c80590_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)21"
+          "UniqueIdGenerator": "(string)78"
         }
       },
       "TypeInfos": {

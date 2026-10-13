@@ -78,7 +78,7 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)VAR_GLOBAL\n\tTIME_IN_ROW: USINT := 0;\n\tEVENT_IN_ROW: USINT := 1;\n\tTIME_UP_DOWN: USINT := 2;\n\tEVENT_UP_DOWN: USINT := 3;\n\tTIME_UP_DOWN_SMALL: USINT := 4;\n\tEVENT_UP_DOWN_SMALL: USINT := 5;\n\tTIME_IN_ROW_SMALL: USINT := 6;\n\tEVENT_IN_ROW_SMALL: USINT := 7;\n\tNO_DEBOUNCE: USINT := 8;\n\tNATIVE: USINT := 8;\nEND_VAR",
+                  "TextBlobForSerialisation": "(string)VAR_GLOBAL\n\tTIME_IN_ROW         : USINT := 0;\n\tEVENT_IN_ROW        : USINT := 1;\n\tTIME_UP_DOWN        : USINT := 2;\n\tEVENT_UP_DOWN       : USINT := 3;\n\tTIME_UP_DOWN_SMALL  : USINT := 4;\n\tEVENT_UP_DOWN_SMALL : USINT := 5;\n\tTIME_IN_ROW_SMALL   : USINT := 6;\n\tEVENT_IN_ROW_SMALL  : USINT := 7;\n\tNO_DEBOUNCE         : USINT := 8;\n\tNATIVE              : USINT := 8;\nEND_VAR\n",
                   "LineInfoPersistence": "(string)ab59de60-3df5-4666-8503-c4329ee728e5_Decl_LineIds"
                 }
               }

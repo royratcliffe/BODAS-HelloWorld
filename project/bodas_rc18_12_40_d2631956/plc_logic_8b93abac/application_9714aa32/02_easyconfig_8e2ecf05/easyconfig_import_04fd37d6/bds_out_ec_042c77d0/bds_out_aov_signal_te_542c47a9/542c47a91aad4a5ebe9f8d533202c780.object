@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_out_aov_signal_te :\n(\n\tOUT_AOV_START_SIGNALS := 16#300,\n\tOUT_AOV_START := 16#2FF,\n\tK25,\n\tA12,\n\tK62,\n\tOUT_AOV_NUM_SIGNALS,\n\tOUT_AOV_PVG_NUM_SIGNALS := K62\n) UINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_out_aov_signal_te : (\n\t\tOUT_AOV_START_SIGNALS := 16#300,\n\t\tOUT_AOV_START         := 16#2FF,\n\t\tK25,\n\t\tA12,\n\t\tK62,\n\t\tOUT_AOV_NUM_SIGNALS,\n\t\tOUT_AOV_PVG_NUM_SIGNALS := K62\n\t) UINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)542c47a9-1aad-4a5e-be9f-8d533202c780_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)14"
+          "UniqueIdGenerator": "(string)50"
         }
       },
       "TypeInfos": {

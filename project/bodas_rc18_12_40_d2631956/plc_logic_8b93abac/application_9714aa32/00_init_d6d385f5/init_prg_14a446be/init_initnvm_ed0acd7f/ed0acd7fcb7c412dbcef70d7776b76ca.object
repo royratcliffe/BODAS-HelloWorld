@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** Initialization: NVM  ************************************)\n(******************************************************************************)\n\nbds_mem_readBlock( UINT_TO_USINT( bds_mem_nvmBlock01_512_R_D ), ADR(GlobalVariables.PrmAsw_gstruc), 0, SIZEOF(GlobalVariables.PrmAsw_gstruc));\n\nPRG_NVMConfig.ACT_InitNVMConfig();",
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** Initialization: NVM  ************************************)\n(******************************************************************************)\nbds_mem_readBlock(UINT_TO_USINT(bds_mem_nvmBlock01_512_R_D), ADR(GlobalVariables.PrmAsw_gstruc), 0, SIZEOF(GlobalVariables.PrmAsw_gstruc));\nPRG_NVMConfig.ACT_InitNVMConfig();\n",
                   "LineInfoPersistence": "(string)ed0acd7f-cb7c-412d-bcef-70d7776b76ca_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)9"
+          "UniqueIdGenerator": "(string)24"
         }
       },
       "TypeInfos": {

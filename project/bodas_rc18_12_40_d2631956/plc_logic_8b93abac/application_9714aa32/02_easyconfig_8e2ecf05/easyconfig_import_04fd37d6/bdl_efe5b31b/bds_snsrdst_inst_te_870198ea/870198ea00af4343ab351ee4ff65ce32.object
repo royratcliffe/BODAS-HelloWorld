@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_snsrDst_inst_te :\n(\n\tSpdSnsr_E := 0,\n\tbds_snsrDst_numInst_E\n) USINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'qualified_only' := ''}\n{attribute 'strict' := ''}\nTYPE bds_snsrDst_inst_te : (\n\t\tSpdSnsr_E := 0,\n\t\tbds_snsrDst_numInst_E\n\t) USINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)870198ea-00af-4343-ab35-1ee4ff65ce32_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)9"
+          "UniqueIdGenerator": "(string)30"
         }
       },
       "TypeInfos": {

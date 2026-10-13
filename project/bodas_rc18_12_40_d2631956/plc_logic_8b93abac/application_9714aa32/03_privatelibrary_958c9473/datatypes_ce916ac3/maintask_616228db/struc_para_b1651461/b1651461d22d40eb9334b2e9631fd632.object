@@ -57,13 +57,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)TYPE struc_para :\nSTRUCT\n\tfctPmp_s16        : INT;\n\tlistCtrlVlv_enu   : enu_listCtrlVlv;\t(* parameter DID 0xC002, list {0 - Off; 1 - OnPos; 2 - OnNeg;} *)\n\tnrCogs_s16        : INT;\n\tiSpSafout1_u16    : UINT;\n\tiSpSafout2_u16    : UINT;\n\tnEngSpd_rpm_au16  : ARRAY[0..2] OF UINT;\n\teff_perc_au16     : ARRAY[0..2] OF UINT;\n\tPrmDbg_struc      : struc_DbgMgrPrm;\n\t\nEND_STRUCT\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string)TYPE struc_para : STRUCT\n\t\tfctPmp_s16       : INT;\n\t\tlistCtrlVlv_enu  : enu_listCtrlVlv; (* parameter DID 0xC002, list {0 - Off; 1 - OnPos; 2 - OnNeg;} *)\n\t\tnrCogs_s16       : INT;\n\t\tiSpSafout1_u16   : UINT;\n\t\tiSpSafout2_u16   : UINT;\n\t\tnEngSpd_rpm_au16 : ARRAY[0..2] OF UINT;\n\t\teff_perc_au16    : ARRAY[0..2] OF UINT;\n\t\tPrmDbg_struc     : struc_DbgMgrPrm;\n\tEND_STRUCT\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)b1651461-d22d-40eb-9334-b2e9631fd632_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)15"
+          "UniqueIdGenerator": "(string)48"
         }
       },
       "TypeInfos": {

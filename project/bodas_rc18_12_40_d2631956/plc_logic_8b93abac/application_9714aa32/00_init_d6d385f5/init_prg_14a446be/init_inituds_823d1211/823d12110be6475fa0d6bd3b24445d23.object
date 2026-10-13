@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** Initialization: UDS  ************************************)\n(******************************************************************************)\n\nPRG_UDS.ACT_InitUDS();",
+                  "TextBlobForSerialisation": "(string)(******************************************************************************)\n(******************** Initialization: UDS  ************************************)\n(******************************************************************************)\nPRG_UDS.ACT_InitUDS();\n",
                   "LineInfoPersistence": "(string)823d1211-0be6-475f-a0d6-bd3b24445d23_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)23"
+          "UniqueIdGenerator": "(string)35"
         }
       },
       "TypeInfos": {

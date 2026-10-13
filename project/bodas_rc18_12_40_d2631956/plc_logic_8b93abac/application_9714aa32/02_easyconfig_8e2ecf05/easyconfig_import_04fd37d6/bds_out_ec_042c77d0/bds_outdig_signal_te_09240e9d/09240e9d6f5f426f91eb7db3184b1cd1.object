@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_bds_outDig_signal_te'}\nTYPE bds_outDig_signal_te :\n(\n\tbds_outDig_K13_E := 0,\n\tbds_outDig_A04_E,\n\tbds_outDig_A10_E,\n\tbds_outDig_A56_E,\n\tbds_outDig_A11_E,\n\tbds_outDig_A55_E,\n\tbds_outDig_A01_E,\n\tbds_outDig_A06_E,\n\tbds_outDig_A16_E,\n\tbds_outDig_A58_E,\n\tbds_outDig_A49_E,\n\tbds_outDig_A50_E,\n\tbds_outDig_K84_E,\n\tbds_outDig_K85_E,\n\tbds_outDig_K86_E,\n\tbds_outDig_K87_E,\n\tbds_outDig_K07_E,\n\tbds_outDig_K09_E,\n\tbds_outDig_K73_E,\n\tbds_outDig_K08_E,\n\tbds_outDig_K29_E,\n\tbds_outDig_K17_E,\n\tbds_outDig_A32_E,\n\tbds_outDig_A47_E,\n\tbds_outDig_A31_E,\n\tbds_outDig_A48_E,\n\tbds_outDig_A46_E,\n\tbds_outDig_A33_E,\n\tbds_outDig_A34_E,\n\tbds_outDig_A51_E,\n\tbds_outDig_A35_E,\n\tbds_outDig_A53_E,\n\tbds_outDig_A52_E,\n\tbds_outDig_A54_E,\n\tbds_outDig_K16_E,\n\tbds_outDig_K14_E,\n\tbds_outDig_K15_E,\n\tbds_outDig_A19_E,\n\tbds_outDig_A05_E,\n\tbds_outDig_A20_E,\n\tbds_outDig_A09_E,\n\tbds_outDig_A02_E,\n\tbds_outDig_A17_E,\n\tbds_outDig_K51_E,\n\tbds_outDig_K12_E,\n\tbds_outDig_A03_E,\n\tbds_outDig_A18_E,\n\tbds_outDig_A08_E,\n\tbds_outDig_A07_E,\n\tbds_outDig_K80_E,\n\tbds_outDig_K81_E,\n\tbds_outDig_K82_E,\n\tbds_outDig_K83_E,\n\tbds_outDig_numSignal_E\n) USINT;\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_bds_outDig_signal_te'}\nTYPE bds_outDig_signal_te : (\n\t\tbds_outDig_K13_E := 0,\n\t\tbds_outDig_A04_E,\n\t\tbds_outDig_A10_E,\n\t\tbds_outDig_A56_E,\n\t\tbds_outDig_A11_E,\n\t\tbds_outDig_A55_E,\n\t\tbds_outDig_A01_E,\n\t\tbds_outDig_A06_E,\n\t\tbds_outDig_A16_E,\n\t\tbds_outDig_A58_E,\n\t\tbds_outDig_A49_E,\n\t\tbds_outDig_A50_E,\n\t\tbds_outDig_K84_E,\n\t\tbds_outDig_K85_E,\n\t\tbds_outDig_K86_E,\n\t\tbds_outDig_K87_E,\n\t\tbds_outDig_K07_E,\n\t\tbds_outDig_K09_E,\n\t\tbds_outDig_K73_E,\n\t\tbds_outDig_K08_E,\n\t\tbds_outDig_K29_E,\n\t\tbds_outDig_K17_E,\n\t\tbds_outDig_A32_E,\n\t\tbds_outDig_A47_E,\n\t\tbds_outDig_A31_E,\n\t\tbds_outDig_A48_E,\n\t\tbds_outDig_A46_E,\n\t\tbds_outDig_A33_E,\n\t\tbds_outDig_A34_E,\n\t\tbds_outDig_A51_E,\n\t\tbds_outDig_A35_E,\n\t\tbds_outDig_A53_E,\n\t\tbds_outDig_A52_E,\n\t\tbds_outDig_A54_E,\n\t\tbds_outDig_K16_E,\n\t\tbds_outDig_K14_E,\n\t\tbds_outDig_K15_E,\n\t\tbds_outDig_A19_E,\n\t\tbds_outDig_A05_E,\n\t\tbds_outDig_A20_E,\n\t\tbds_outDig_A09_E,\n\t\tbds_outDig_A02_E,\n\t\tbds_outDig_A17_E,\n\t\tbds_outDig_K51_E,\n\t\tbds_outDig_K12_E,\n\t\tbds_outDig_A03_E,\n\t\tbds_outDig_A18_E,\n\t\tbds_outDig_A08_E,\n\t\tbds_outDig_A07_E,\n\t\tbds_outDig_K80_E,\n\t\tbds_outDig_K81_E,\n\t\tbds_outDig_K82_E,\n\t\tbds_outDig_K83_E,\n\t\tbds_outDig_numSignal_E\n\t) USINT;\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)09240e9d-6f5f-426f-91eb-7db3184b1cd1_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)60"
+          "UniqueIdGenerator": "(string)234"
         }
       },
       "TypeInfos": {

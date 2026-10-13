@@ -37,13 +37,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string)(* activate FI *)\n//bds_in_fi_cfg(bds_in_fi_signal_te.K54_VI, STD_OFF);\n\n(* DST Sensor *)\n(* BDL API FUNCTION call TO configure DST sensor instance *)\nbds_snsrDst_cfgSpdAndDir(bds_snsrDst_inst_te.SpdSnsr_E, 75);\n",
+                  "TextBlobForSerialisation": "(string)(* activate FI *)\n//bds_in_fi_cfg(bds_in_fi_signal_te.K54_VI, STD_OFF);\n(* DST Sensor *)\n(* BDL API FUNCTION call TO configure DST sensor instance *)\nbds_snsrDst_cfgSpdAndDir(bds_snsrDst_inst_te.SpdSnsr_E, 75);\n",
                   "LineInfoPersistence": "(string)71b36b94-fc02-42da-8fd5-5ce144cadddb_Impl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)43"
+          "UniqueIdGenerator": "(string)73"
         }
       },
       "TypeInfos": {

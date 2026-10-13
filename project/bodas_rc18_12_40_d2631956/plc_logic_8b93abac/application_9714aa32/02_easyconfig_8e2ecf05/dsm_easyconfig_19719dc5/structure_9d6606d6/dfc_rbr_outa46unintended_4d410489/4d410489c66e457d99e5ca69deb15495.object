@@ -78,13 +78,13 @@
               "TextDocument": {
                 "@Type": "f3878285",
                 "@Value": {
-                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_DFC_rbr_outA46Unintended'}\nTYPE DFC_rbr_outA46Unintended :\nSTRUCT\n\tDTC: UDINT := 16#14C400;\n\tDFCid: UINT := 1006;\n\tdebounceMethod: USINT := NO_DEBOUNCE;\nEND_STRUCT\nEND_TYPE\n",
+                  "TextBlobForSerialisation": "(string){attribute 'external_name' := 'cmp_rts_DFC_rbr_outA46Unintended'}\nTYPE DFC_rbr_outA46Unintended : STRUCT\n\t\tDTC            : UDINT := 16#14C400;\n\t\tDFCid          : UINT  := 1006;\n\t\tdebounceMethod : USINT := NO_DEBOUNCE;\n\tEND_STRUCT\nEND_TYPE\n",
                   "LineInfoPersistence": "(string)4d410489-c66e-457d-99e5-ca69deb15495_Decl_LineIds"
                 }
               }
             }
           },
-          "UniqueIdGenerator": "(string)9"
+          "UniqueIdGenerator": "(string)30"
         }
       },
       "TypeInfos": {
